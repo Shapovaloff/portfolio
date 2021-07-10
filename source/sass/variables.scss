@@ -4,17 +4,20 @@
 
 // Default
 
-$color-default-black:             #4A4B65;
-$color-default-white:             #ffffff;
+$color-black:                     #4A4B65;
+$color-white:                     #ffffff;
 $color-transparent:               rgba(255, 255, 255, 0);
 
 // Base
 
-$color-accent:                      #766DF4;
+$color-primary:                    #766DF4;
+$color-primary-8:                  #F4F3FE;
+$color-primary-30:                 #D6D3FC;
+$color-primary-50:                 #BBB6F9;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$black-to-right:                   linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 
 // Typography
 //---------------------------------
@@ -24,6 +27,16 @@ $font-size-main:                     16px;
 
 // https://www.artlebedev.ru/kovodstvo/sections/159/
 $font-family--rouble:               "Rouble", "Arial", sans-serif;
+
+
+// Box shadow
+//---------------------------------
+$bs-btn:                            0px 0px 0px 3px rgba($color-primary, 0.25);
+
+// Size Element
+//---------------------------------
+$border-radius:                     12px;
+
 
 // Animation
 //---------------------------------
@@ -47,3 +60,16 @@ $vp--1920:                          1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+:root {
+  --text-color: #{$color-black};
+  --white-color: #{$color-white};
+  --primary-color: #{$color-primary};
+  --primary-color-8: #{$color-primary-8};
+  --primary-color-30: #{$color-primary-30};
+  --primary-color-50: #{$color-primary-50};
+}
+
+html.dark {
+  --text-color: #{$color-white};
+}

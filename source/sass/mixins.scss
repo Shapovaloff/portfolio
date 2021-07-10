@@ -9,6 +9,20 @@
   @return #{$remSize}rem;
 }
 
+@mixin reset-btn {
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 // Desktop first
 
 @mixin vp--1919 {

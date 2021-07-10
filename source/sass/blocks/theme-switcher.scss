@@ -1,0 +1,58 @@
+.theme-switcher {
+  position: relative;
+  background-color: $color-primary-30;
+  background-color: var(--primary-color-30);
+  border-radius: size($border-radius);
+  transition: background-color .2s, box-shadow .2s;
+
+  &__toggle {
+    width: size(68px);
+    height: size(34px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid $color-primary;
+    border: 2px solid var(--primary-color);
+    border-radius: size($border-radius);
+    padding: size(4px);
+    color: $color-white;
+    color: var(--white-color);
+    cursor: pointer;
+
+    & svg {
+      width: size(24px);
+      height: size(24px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: size($border-radius);
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 36px;
+      background-color: $color-primary;
+      background-color: var(--primary-color);
+      pointer-events: none;
+      transition: transform .3s;
+    }
+  }
+
+  & input:checked + .theme-switcher__toggle::after {
+    transform: translateX(size(32px));
+  }
+
+  & input:focus + .theme-switcher__toggle {
+    box-shadow: $bs-btn;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      background-color: $color-primary-50;
+      background-color: var(--primary-color-50);
+    }
+  }
+}

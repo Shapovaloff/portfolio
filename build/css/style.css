@@ -384,6 +384,19 @@ template {
   display: none;
 }
 
+:root {
+  --text-color: #4A4B65;
+  --white-color: #ffffff;
+  --primary-color: #766DF4;
+  --primary-color-8: #F4F3FE;
+  --primary-color-30: #D6D3FC;
+  --primary-color-50: #BBB6F9;
+}
+
+html.dark {
+  --text-color: #ffffff;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -434,7 +447,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lato-Regular", "Arial", sans-serif;
-  color: #4A4B65;
+  color: var(--text-color);
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -442,7 +455,7 @@ body {
 }
 
 a {
-  color: #4A4B65;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -460,7 +473,7 @@ textarea {
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
   box-shadow: inset 0 0 0 1000px #ffffff;
-  -webkit-text-fill-color: #4A4B65;
+  -webkit-text-fill-color: var(--text-color);
 }
 
 input,
@@ -648,7 +661,142 @@ button,
 }
 
 .header {
-  padding: 0 40px;
+  position: relative;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.125rem;
+  width: 100%;
+  background-color: #D6D3FC;
+  background-color: var(--primary-color-30);
+}
+
+.header__container {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.header__logo {
+  color: #766DF4;
+  color: var(--primary-color);
+  width: 3rem;
+  height: 3rem;
+}
+
+.header__logo svg {
+  display: block;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 7.5rem;
+}
+
+.main-nav__item:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  padding: 0.25rem 0rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  -webkit-transition: color .2s;
+  transition: color .2s;
+}
+
+.theme-switcher {
+  position: relative;
+  background-color: #D6D3FC;
+  background-color: var(--primary-color-30);
+  border-radius: 0.75rem;
+  -webkit-transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, -webkit-box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s;
+  transition: background-color .2s, box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.theme-switcher__toggle {
+  width: 4.25rem;
+  height: 2.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border: 2px solid #766DF4;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  color: #ffffff;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.theme-switcher__toggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.theme-switcher__toggle::after {
+  content: "";
+  position: absolute;
+  border-radius: 0.75rem;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 36px;
+  background-color: #766DF4;
+  background-color: var(--primary-color);
+  pointer-events: none;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.theme-switcher input:checked + .theme-switcher__toggle::after {
+  -webkit-transform: translateX(2rem);
+  transform: translateX(2rem);
+}
+
+.theme-switcher input:focus + .theme-switcher__toggle {
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(118, 109, 244, 0.25);
+  box-shadow: 0px 0px 0px 3px rgba(118, 109, 244, 0.25);
 }
 
 .footer {
@@ -764,6 +912,18 @@ button,
     color: red;
   }
 } */
+
+@media (min-width: 1024px) {
+  .main-nav__link:hover {
+    color: #766DF4;
+    color: var(--primary-color);
+  }
+
+  .theme-switcher:hover {
+    background-color: #BBB6F9;
+    background-color: var(--primary-color-50);
+  }
+}
 
 @media (max-width: 1023px) {
   .container {

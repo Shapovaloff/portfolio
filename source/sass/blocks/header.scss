@@ -1,3 +1,33 @@
 .header {
-  padding: 0 40px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: size(2px);
+    width: 100%;
+    background-color: $color-primary-30;
+    background-color: var(--primary-color-30);
+  }
+
+  &__container {
+    padding-top: size(20px);
+    padding-bottom: size(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    color: $color-primary;
+    color: var(--primary-color);
+    width: size(48px);
+    height: size(48px);
+
+    & svg {
+      display: block;
+    }
+  }
 }

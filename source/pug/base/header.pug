@@ -1,34 +1,32 @@
 mixin header(headerMods, currentPage)
   -
     var headerLinks = [
-      {
-        href: "#",
-        text: "Страница 1"
-      },
-      {
-        href: "#",
-        text: "Страница 2"
-      },
-      {
-        href: "#",
-        text: "Страница 3"
-      },
+      {href: "#about", text: "Обо мне"},
+      {href: "#last-works", text: "Последние работы"},
+      {href: "#career", text: "Карьера"},
+      {href: "#technologies", text: "Технологии"},
     ]
 
   header.header(class=headerMods)
-    .header__wrapper
-      if(currentPage === "main")
-        a.header__logo Логотип
+    .header__container.container
+      if(currentPage === "index")
+        a.header__logo
+          +icon("icon-logo", 48, 48)
       else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="/", aria-label="Переход на главную")
+          +icon("icon-logo", 48, 48)
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link, index in headerLinks
-              li.main-nav__item
-                if(index === currentPage)
-                  a.main-nav__link.main-nav__link--active=link.text
-                else
-                  a.main-nav__link(href=link.href)=link.text
+        ul.main-nav__list
+          each link, index in headerLinks
+            li.main-nav__item
+              if(index === currentPage)
+                a.main-nav__link.main-nav__link--active=link.text
+              else
+                a.main-nav__link(href=link.href)=link.text
+
+        .header__toggle.theme-switcher
+          input(type="checkbox", aria-label="смена темы", name="color-theme", id="color-theme", class="visually-hidden")
+          label(for="color-theme").theme-switcher__toggle
+            +icon('icon-sun', 24, 24)
+            +icon('icon-moon', 24, 24)
+
