@@ -4,6 +4,11 @@
   }
 }
 
+@function size($size) {
+  $remSize: $size / $font-size-main;
+  @return #{$remSize}rem;
+}
+
 // Desktop first
 
 @mixin vp--1919 {

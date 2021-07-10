@@ -12,10 +12,32 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Lato-Regular";
 
   font-display: swap;
   src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+    url("../fonts/lato-regular.woff2") format("woff2"),
+    url("../fonts/lato-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Lato-bold";
+
+  font-display: swap;
+  src:
+    url("../fonts/lato-bold.woff2") format("woff2"),
+    url("../fonts/lato-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "lato-Black";
+
+  font-display: swap;
+  src:
+    url("../fonts/lato-black.woff2") format("woff2"),
+    url("../fonts/lato-black.woff") format("woff");
 }

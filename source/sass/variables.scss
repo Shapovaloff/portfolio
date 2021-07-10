@@ -4,7 +4,7 @@
 
 // Default
 
-$color-default-black:             #000000;
+$color-default-black:             #4A4B65;
 $color-default-white:             #ffffff;
 $color-transparent:               rgba(255, 255, 255, 0);
 
@@ -19,7 +19,8 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // Typography
 //---------------------------------
 
-$font-family--placeholder:          "", "Arial", sans-serif;
+$font-main:                          "Lato-Regular", "Arial", sans-serif;
+$font-size-main:                     16px;
 
 // https://www.artlebedev.ru/kovodstvo/sections/159/
 $font-family--rouble:               "Rouble", "Arial", sans-serif;

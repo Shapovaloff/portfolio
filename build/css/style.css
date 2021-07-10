@@ -387,9 +387,25 @@ template {
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
+  font-family: "Lato-Regular";
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2"), url("../fonts/.woff") format("woff");
+  src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Lato-bold";
+  font-display: swap;
+  src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 900;
+  font-family: "lato-Black";
+  font-display: swap;
+  src: url("../fonts/lato-black.woff2") format("woff2"), url("../fonts/lato-black.woff") format("woff");
 }
 
 *,
@@ -416,9 +432,9 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
-  font-family: "", "Arial", sans-serif;
-  color: #000000;
+  line-height: 1.5;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+  color: #4A4B65;
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -426,7 +442,7 @@ body {
 }
 
 a {
-  color: #000000;
+  color: #4A4B65;
   text-decoration: none;
 }
 
@@ -444,7 +460,7 @@ textarea {
 input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
   box-shadow: inset 0 0 0 1000px #ffffff;
-  -webkit-text-fill-color: #000000;
+  -webkit-text-fill-color: #4A4B65;
 }
 
 input,
@@ -655,7 +671,7 @@ button,
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(74, 75, 101, 0.6);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   visibility: hidden;

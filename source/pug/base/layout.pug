@@ -15,8 +15,13 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     meta(name="description", content=description)
+
     //- генерируйте favicon тут - https://realfavicongenerator.net/
     //- в подключение фавикон манифеста обязательно добавьте строчки crossorigin="use-credentials"
+
+    link(rel="preload", href="fonts/lato-regular.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/lato-black.woff2", as="font", crossorigin="anonymous")
+    link(rel="preload", href="fonts/lato-bold.woff2", as="font", crossorigin="anonymous")
 
     //- используйте только для шрифта находящегося на первом экране
     //- link(rel="preload", href="fonts/placeholder.woff2", as="font", crossorigin="anonymous")
