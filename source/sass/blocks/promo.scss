@@ -1,0 +1,44 @@
+.promo {
+  height: calc(100vh - 80px);
+  min-height: 650px;
+  max-height: 900px;
+
+  &__container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 200px;
+  }
+
+  &__img-block {
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 770px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__text {
+    & span {
+      color: $color-primary;
+      color: var(--primary-color);
+    }
+  }
+
+  &__title {
+    margin-bottom: size(8px);
+  }
+
+  &__button {
+    margin: size(32px) 0 0;
+  }
+
+}

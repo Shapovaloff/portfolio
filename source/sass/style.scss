@@ -13,6 +13,8 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/title";
+@import "global/button";
 
 // Blocks
 //---------------------------------
@@ -20,6 +22,9 @@
 @import "blocks/header";
 @import "blocks/main-nav";
 @import "blocks/theme-switcher";
+@import "blocks/promo";
+
+
 @import "blocks/footer";
 @import "blocks/modal";
 
