@@ -13,7 +13,8 @@
   }
 
   &__container {
-    padding: size(16px) 0;
+    padding-top: size(16px);
+    padding-bottom: size(16px);
     display: flex;
     align-items: center;
     justify-content: space-between;

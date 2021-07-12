@@ -743,7 +743,8 @@ button,
 }
 
 .header__container {
-  padding: 1rem 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -917,6 +918,76 @@ button,
 
 .promo__button {
   margin: 2rem 0 0;
+}
+
+.promo__animate--circle {
+  fill: #CCCCCC;
+}
+
+.promo__animate--path {
+  opacity: 0;
+}
+
+.dark .promo__animate--circle,
+.dark .promo__animate--path {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+
+.dark .promo__animate--circle {
+  fill: #cccccc;
+  -webkit-animation-name: animate-lamp;
+  animation-name: animate-lamp;
+}
+
+.dark .promo__animate--path {
+  opacity: 0;
+  -webkit-animation-name: animate-lamp-line;
+  animation-name: animate-lamp-line;
+}
+
+@-webkit-keyframes animate-lamp-line {
+  0%, 20%, 40%, 100% {
+    opacity: 1;
+  }
+
+  10%, 30%, 80% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate-lamp-line {
+  0%, 20%, 40%, 100% {
+    opacity: 1;
+  }
+
+  10%, 30%, 80% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animate-lamp {
+  0%, 20%, 40%, 100% {
+    fill: #F9F0A3;
+  }
+
+  10%, 30%, 80% {
+    fill: #cccccc;
+  }
+}
+
+@keyframes animate-lamp {
+  0%, 20%, 40%, 100% {
+    fill: #F9F0A3;
+  }
+
+  10%, 30%, 80% {
+    fill: #cccccc;
+  }
 }
 
 .footer {

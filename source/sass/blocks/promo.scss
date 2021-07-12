@@ -41,4 +41,65 @@
     margin: size(32px) 0 0;
   }
 
+  &__animate {
+    &--circle {
+      fill: #CCCCCC;
+    }
+
+    &--path  {
+      opacity: 0;
+    }
+  }
+}
+
+
+
+
+
+.dark .promo__animate {
+  &--circle,
+  &--path {
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    animation-delay: .15s;
+  }
+
+  &--circle {
+    fill: $a-color-gray;
+    animation-name: animate-lamp;
+  }
+
+  &--path  {
+    opacity: 0;
+    animation-name: animate-lamp-line;
+  }
+}
+
+@keyframes animate-lamp-line {
+  0%,
+  20%,
+  40%,
+  100% {
+    opacity: 1;
+  }
+
+  10%,
+  30%,
+  80% {
+    opacity: 0;
+  }
+}
+@keyframes animate-lamp {
+  0%,
+  20%,
+  40%,
+  100% {
+    fill: $a-color-yellow;
+  }
+
+  10%,
+  30%,
+  80% {
+    fill: $a-color-gray;
+  }
 }
