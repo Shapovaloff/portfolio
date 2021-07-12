@@ -10,7 +10,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: size(24px);
+      margin-right: size(32px);
     }
   }
 
@@ -18,7 +18,7 @@
     position: relative;
     display: block;
     padding: size(4px) size(0px);
-    font-size: size(20px);
+    font-size: size(18px);
     line-height: 1.5;
     transition: color .2s;
 

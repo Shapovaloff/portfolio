@@ -1,0 +1,39 @@
+.advantages {
+  &__container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    @include reset-list;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: size(30px);
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+
+    & img {
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-left: size(24px);
+
+    & h3 {
+      margin: 0;
+      font-size: size(20px);
+      line-height: 1.4;
+      font-weight: 700;
+    }
+
+    & p {
+      margin: size(12px) 0 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+}

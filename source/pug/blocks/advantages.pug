@@ -1,0 +1,17 @@
+-
+  var advantagesList = [
+    {srcName: "checked", title: "Валидный код", text: "Все HTML-файлы проверяются валидатором W3C"},
+    {srcName: "adaptive", title: "Адаптивная вёрстка", text: "Десктом, планшетная версия, мобильная версия"},
+    {srcName: "pixel-perfect", title: "Pixel Perfect", text: "Верстка сайта максимально точно совпадающая с макетом пиксель в пиксель"},
+  ]
+
+section.advantages
+  .advantages__container.container
+    h2.visually-hidden Преимущества
+    ul.advantages__list
+      each advantagesItem in advantagesList
+        li.advantages__item
+          img(src="../../img/advantages/" + advantagesItem.srcName + ".svg", alt=advantagesItem.srcName)
+          .advantages__text
+            h3=advantagesItem.title
+            p=advantagesItem.text

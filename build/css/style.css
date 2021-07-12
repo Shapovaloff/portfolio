@@ -787,14 +787,14 @@ button,
 }
 
 .main-nav__item:not(:last-child) {
-  margin-right: 1.5rem;
+  margin-right: 2rem;
 }
 
 .main-nav__link {
   position: relative;
   display: block;
   padding: 0.25rem 0rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.5;
   -webkit-transition: color .2s;
   transition: color .2s;
@@ -988,6 +988,52 @@ button,
   10%, 30%, 80% {
     fill: #cccccc;
   }
+}
+
+.advantages__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.875rem;
+}
+
+.advantages__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.advantages__item img {
+  display: block;
+}
+
+.advantages__text {
+  margin-left: 1.5rem;
+}
+
+.advantages__text h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.advantages__text p {
+  margin: 0.75rem 0 0;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .footer {
