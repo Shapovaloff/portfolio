@@ -5,15 +5,18 @@
 // Default
 
 $color-black:                     #4A4B65;
+$color-dark:                      #37384e;
 $color-white:                     #ffffff;
+$color-white-light:               #F9FAFB;
 $color-transparent:               rgba(255, 255, 255, 0);
 
 // Base
 
 $color-primary:                    #766DF4;
+$color-primary-hover:              #5549F1;
 $color-primary-8:                  #F4F3FE;
-$color-primary-30:                 #D6D3FC;
-$color-primary-50:                 #BBB6F9;
+$color-primary-30:                 rgba($color-primary, .3);
+$color-primary-50:                 rgba($color-primary, .5);
 
 // Gradient
 
@@ -64,7 +67,9 @@ $retina-dppx:                       1.5dppx;
 :root {
   --text-color: #{$color-black};
   --white-color: #{$color-white};
+  --bg-color: #{$color-white};
   --primary-color: #{$color-primary};
+  --primary-color-hover: #{$color-primary-hover};
   --primary-color-8: #{$color-primary-8};
   --primary-color-30: #{$color-primary-30};
   --primary-color-50: #{$color-primary-50};
@@ -72,4 +77,5 @@ $retina-dppx:                       1.5dppx;
 
 html.dark {
   --text-color: #{$color-white};
+  --bg-color: #{$color-dark};
 }

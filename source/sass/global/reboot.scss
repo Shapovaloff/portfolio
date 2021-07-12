@@ -23,9 +23,10 @@ body {
   font-size: $font-size-main;
   line-height: 1.5;
   font-family: $font-main;
-  color: var( --text-color);
-
+  color: $color-black;
+  color: var(--text-color);
   background-color: $color-white;
+  background-color: var(--bg-color);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

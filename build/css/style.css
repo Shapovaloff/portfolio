@@ -387,14 +387,17 @@ template {
 :root {
   --text-color: #4A4B65;
   --white-color: #ffffff;
+  --bg-color: #ffffff;
   --primary-color: #766DF4;
+  --primary-color-hover: #5549F1;
   --primary-color-8: #F4F3FE;
-  --primary-color-30: #D6D3FC;
-  --primary-color-50: #BBB6F9;
+  --primary-color-30: rgba(118, 109, 244, 0.3);
+  --primary-color-50: rgba(118, 109, 244, 0.5);
 }
 
 html.dark {
   --text-color: #ffffff;
+  --bg-color: #37384e;
 }
 
 @font-face {
@@ -447,8 +450,10 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-family: "Lato-Regular", "Arial", sans-serif;
+  color: #4A4B65;
   color: var(--text-color);
   background-color: #ffffff;
+  background-color: var(--bg-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -671,7 +676,7 @@ button,
   left: 0;
   height: 0.125rem;
   width: 100%;
-  background-color: #D6D3FC;
+  background-color: rgba(118, 109, 244, 0.3);
   background-color: var(--primary-color-30);
 }
 
@@ -735,7 +740,7 @@ button,
 
 .theme-switcher {
   position: relative;
-  background-color: #D6D3FC;
+  background-color: rgba(118, 109, 244, 0.3);
   background-color: var(--primary-color-30);
   border-radius: 0.75rem;
   -webkit-transition: background-color .2s, -webkit-box-shadow .2s;
@@ -763,6 +768,8 @@ button,
   color: #ffffff;
   color: var(--white-color);
   cursor: pointer;
+  -webkit-transition: border-color .2s;
+  transition: border-color .2s;
 }
 
 .theme-switcher__toggle svg {
@@ -783,10 +790,10 @@ button,
   background-color: #766DF4;
   background-color: var(--primary-color);
   pointer-events: none;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: background-color .2s, -webkit-transform .3s;
+  transition: background-color .2s, -webkit-transform .3s;
+  transition: transform .3s, background-color .2s;
+  transition: transform .3s, background-color .2s, -webkit-transform .3s;
 }
 
 .theme-switcher input:checked + .theme-switcher__toggle::after {
@@ -919,9 +926,14 @@ button,
     color: var(--primary-color);
   }
 
-  .theme-switcher:hover {
-    background-color: #BBB6F9;
-    background-color: var(--primary-color-50);
+  .theme-switcher:hover .theme-switcher__toggle {
+    border-color: #5549F1;
+    border-color: var(--primary-color-hover);
+  }
+
+  .theme-switcher:hover .theme-switcher__toggle::after {
+    background-color: #5549F1;
+    background-color: var(--primary-color-hover);
   }
 }
 
