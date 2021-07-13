@@ -1,0 +1,21 @@
+- var aboutList = ["Frontend-разработчик", "Опыт 1+ год", "Постоянно обучаюсь и изучаю новое"]
+
+section.about
+  .about__container.container
+    h2.about__title.title.title--h2 Обо мне
+    .about__wrapper
+      .about__points
+        img(src="img/about/points.svg", width="145", height="106", alt="points")
+      .about__photo-block
+        picture
+          img(src="img/about/about-photo@1x.jpg", srcset="img/about/about-photo@2x.jpg 2x" alt="Yury Shapovalov")
+      .about__info
+        h3 Привет, меня зовут Юрий Шаповалов
+        ul
+          each aboutItem in aboutList
+            li=aboutItem
+        a(href="#!").about__link.button.button--transparent
+          span Скачать резюме
+          +icon("icon-download", 24, 24)
+      .about__illustration
+        img(src="img/about/about-illustration.svg", width="255", height="165" alt="Illustration about")

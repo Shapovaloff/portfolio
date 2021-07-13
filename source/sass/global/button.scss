@@ -1,7 +1,7 @@
 .button {
   @include reset-btn;
   padding: size(12px) size(28px);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   border-radius: $border-radius;
   transition: color .2s, background-color .2s, box-shadow .2s;
@@ -19,16 +19,27 @@
     color: var(--white-color);
     background-color: $color-primary;
     background-color: var(--primary-color);
-  }
 
-  @media (min-width: 1024px) {
-    &:hover {
-      background-color: $color-primary-hover;
-      background-color: var(--primary-color-hover);
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: $color-primary-hover;
+        background-color: var(--primary-color-hover);
+      }
+
+      &:focus {
+        box-shadow: $bs-btn;
+      }
     }
   }
 
-  &:focus {
-    box-shadow: $bs-btn;
+  &--transparent {
+    padding: 0;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $color-primary;
+        color: var(--primary-color);
+      }
+    }
   }
 }

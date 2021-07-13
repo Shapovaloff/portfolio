@@ -31,6 +31,10 @@
       <rect fill="currentColor" x="0" y="7" width="16" height="2" rx="1"/>
       <rect fill="currentColor" opacity="0.5" transform="translate(8.000000, 8.000000) rotate(-270.000000) translate(-8.000000, -8.000000) " x="0" y="7" width="16" height="2" rx="1"/>
   </g>
+</symbol><symbol id="icon-download" viewBox="0 0 24 24">
+<path opacity="0.3" d="M2 13C2 12.5 2.5 12 3 12C3.5 12 4 12.5 4 13C4 13.3333 4 15 4 18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V13C20 12.4477 20.4477 12 21 12C21.5523 12 22 12.4477 22 13V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18C2 15 2 13.3333 2 13Z" fill="#766DF4"/>
+<path opacity="0.3" d="M11 14C11 14.5523 11.4477 15 12 15C12.5523 15 13 14.5523 13 14L13 2C13 1.44771 12.5523 1 12 1C11.4477 1 11 1.44771 11 2L11 14Z" fill="#766DF4"/>
+<path d="M16.2929 9.29289C16.6834 8.90237 17.3166 8.90237 17.7071 9.29289C18.0976 9.68342 18.0976 10.3166 17.7071 10.7071L12.7071 15.7071C12.331 16.0832 11.7264 16.0991 11.331 15.7433L6.33104 11.2433C5.92053 10.8738 5.88725 10.2415 6.25671 9.83103C6.62617 9.42052 7.25845 9.38725 7.66896 9.7567L11.9638 13.622L16.2929 9.29289Z" fill="#766DF4"/>
 </symbol><symbol id="icon-logo" viewBox="0 0 48 48">
 <path d="M34.5436 17.3707C33.7866 16.5664 33.8249 15.3006 34.6293 14.5436C35.4336 13.7866 36.6994 13.8249 37.4564 14.6293L45.4564 23.1293C46.1812 23.8994 46.1812 25.1006 45.4564 25.8707L37.4564 34.3707C36.6994 35.1751 35.4336 35.2134 34.6293 34.4564C33.8249 33.6994 33.7866 32.4336 34.5436 31.6293L41.2535 24.5L34.5436 17.3707ZM13.4564 17.3707L6.7465 24.5L13.4564 31.6293C14.2134 32.4336 14.1751 33.6994 13.3707 34.4564C12.5664 35.2134 11.3006 35.1751 10.5436 34.3707L2.5436 25.8707C1.8188 25.1006 1.8188 23.8994 2.5436 23.1293L10.5436 14.6293C11.3006 13.8249 12.5664 13.7866 13.3707 14.5436C14.1751 15.3006 14.2134 16.5664 13.4564 17.3707Z" fill="currentColor"/>
 <path opacity="0.3" d="M29.5555 10.9945C29.8414 9.92754 29.2083 8.83087 28.1413 8.54498C27.0744 8.2591 25.9777 8.89226 25.6918 9.9592L18.4449 37.0051C18.159 38.0721 18.7922 39.1687 19.8591 39.4546C20.926 39.7405 22.0227 39.1073 22.3086 38.0404L29.5555 10.9945Z" fill="currentColor"/>
@@ -168,6 +172,29 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__container container">
+            <h2 class="about__title title title--h2">Обо мне</h2>
+            <div class="about__wrapper">
+              <div class="about__points"><img src="img/about/points.svg" width="145" height="106" alt="points"></div>
+              <div class="about__photo-block">
+                <picture><img src="img/about/about-photo@1x.jpg" srcset="img/about/about-photo@2x.jpg 2x" alt="Yury Shapovalov"></picture>
+              </div>
+              <div class="about__info">
+                <h3>Привет, меня зовут Юрий Шаповалов</h3>
+                <ul>
+                  <li>Frontend-разработчик</li>
+                  <li>Опыт 1+ год</li>
+                  <li>Постоянно обучаюсь и изучаю новое</li>
+                </ul><a class="about__link button button--transparent" href="#!"><span>Скачать резюме</span>
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-download"></use>
+                  </svg></a>
+              </div>
+              <div class="about__illustration"><img src="img/about/about-illustration.svg" width="255" height="165" alt="Illustration about"></div>
+            </div>
           </div>
         </section>
       </main>

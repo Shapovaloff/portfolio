@@ -6,6 +6,7 @@
 
 $color-black:                     #4A4B65;
 $color-dark:                      #37384e;
+$color-gray:                      #F7F7FC;
 $color-white:                     #ffffff;
 $color-white-light:               #F9FAFB;
 $color-transparent:               rgba(255, 255, 255, 0);
@@ -71,6 +72,7 @@ $retina-dppx:                       1.5dppx;
 :root {
   --text-color: #{$color-black};
   --white-color: #{$color-white};
+  --gray-color: #{$color-gray};
   --bg-color: #{$color-white};
   --primary-color: #{$color-primary};
   --primary-color-hover: #{$color-primary-hover};
@@ -82,4 +84,5 @@ $retina-dppx:                       1.5dppx;
 html.dark {
   --text-color: #{$color-white};
   --bg-color: #{$color-dark};
+  --gray-color: #{$color-black};
 }
