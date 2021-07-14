@@ -1,0 +1,70 @@
+-
+  let techBlocks = [
+    {
+      title: "Основные",
+      nameBlock: "main",
+      techList: [
+        {nameSrc: "html", text: "Html"},
+        {nameSrc: "css", text: "Css"},
+        {nameSrc: "js", text: "JavaScript"},
+        {nameSrc: "react", text: "React"},
+      ],
+    },
+    {
+      title: "Тестирование",
+      nameBlock: "testing",
+      techList: [
+        {nameSrc: "pagespeed", text: "PageSpeed"},
+        {nameSrc: "lighthouse", text: "Lighthouse"},
+        {nameSrc: "w3c", text: "W3C"},
+      ],
+    },
+    {
+      title: "Верстаю макеты из",
+      nameBlock: "graphics-editor",
+      techList: [
+        {nameSrc: "figma", text: "Figma"},
+        {nameSrc: "sketch", text: "Sketch"},
+        {nameSrc: "ps", text: "Photoshop"},
+        {nameSrc: "zeplin", text: "Zeplin"},
+      ],
+    },
+    {
+      title: "Так же умею",
+      nameBlock: "preprocessors",
+      techList: [
+        {nameSrc: "pug", text: "Pug"},
+        {nameSrc: "scss", text: "Scss"},
+        {nameSrc: "less", text: "Less"},
+      ],
+    },
+    {
+      title: "Сборщики и такс-менеджеры",
+      nameBlock: "collector",
+      techList: [
+        {nameSrc: "webpack", text: "Webpack"},
+        {nameSrc: "gulp", text: "Gulp"},
+        {nameSrc: "yarn", text: "Yarn"},
+        {nameSrc: "active-collab", text: "ActiveCollab"},
+      ],
+    },
+  ]
+
+section.technologies
+  .technologies__container.container
+    h2.technologies__title.title.title--h2 Технологии
+    .technologies__blok-list
+      each techBlock in techBlocks
+        .technologies__blok-item
+          h3.title.title--h3=techBlock.title
+          ul.technologies__list
+            each techItem in techBlock.techList
+              li.technologies__item
+                .technologies__img-block
+                  img(src="img/technologies/"+ techBlock.nameBlock +"/"+ techItem.nameSrc +".svg", alt=techItem.text)
+                p.technologies__text=techItem.text
+    .technologies__bg-img
+      img(src="img/technologies/img-bg.svg", width="470", height="320", alt="Technologies")
+
+
+
