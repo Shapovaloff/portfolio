@@ -5,6 +5,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/modals/init-modals';
 import themeChange from './modules/theme-change';
+import initAccordion from './modules/accordion';
 
 // ---------------------------------
 
@@ -19,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // polyfillObjectFit();
 
   iosVhFix();
+  initAccordion();
 
   // Modules
   // ---------------------------------

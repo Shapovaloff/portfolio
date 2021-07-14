@@ -1,0 +1,51 @@
+-
+  let careerList = [
+    {
+      heading: "Asanov Agency",
+      timeText: "сентябрь 2020 - настоящее время",
+      descr: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!",
+      icon: "icon-briefcase",
+    },
+    {
+      heading: "Обучение в HTML Academy",
+      timeText: "июнь 2020 - август 2020",
+      descr: "Проходил онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация",
+      icon: "icon-library",
+    },
+    {
+      heading: "Обучение в HTML Academy",
+      timeText: "март 2020 - май 2020",
+      descr: "Проходил онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов",
+      icon: "icon-library",
+    },
+  ]
+
+section.career
+  .career__container.container
+    h2.career__title.title.title--h2 Опыт
+    .career__wrapper
+      .career__img-container
+        .career__img-block
+          img(src="img/career/career-bg.svg", alt="tasks list")
+      ul.career__list(data-accordion="parent" data-type="single")
+        each careerItem, index in careerList
+          if (index === 0)
+            li.career__item.is-open(data-accordion="element")
+              button(type="button" data-accordion="button").career__heading-btn
+                .career__icon
+                  +icon(careerItem.icon, 32, 32)
+                h4.title.title--h5=careerItem.heading
+                p=careerItem.timeText
+              .career__content(data-accordion="content")
+                .career__content-wrapper
+                  p=careerItem.descr
+          else
+            li.career__item(data-accordion="element")
+              button(type="button" data-accordion="button").career__heading-btn
+                .career__icon
+                  +icon(careerItem.icon, 24, 24)
+                h4.title.title--h5=careerItem.heading
+                p=careerItem.timeText
+              .career__content(data-accordion="content")
+                .career__content-wrapper
+                  p=careerItem.descr

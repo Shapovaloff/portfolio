@@ -5,9 +5,11 @@
 // Default
 
 $color-black:                     #4A4B65;
+$color-black-70:                  #9e9fb4;
 $color-dark:                      #37384e;
 $color-gray:                      #F7F7FC;
 $color-white:                     #ffffff;
+$color-white-70:                  #BFC0C7;
 $color-white-light:               #F9FAFB;
 $color-transparent:               rgba(255, 255, 255, 0);
 
@@ -79,6 +81,7 @@ $retina-dppx:                       1.5dppx;
 
 :root {
   --text-color: #{$color-black};
+  --text-color-70: #{$color-black-70};
   --white-color: #{$color-white};
   --gray-color: #{$color-gray};
   --bg-color: #{$color-white};
@@ -91,6 +94,8 @@ $retina-dppx:                       1.5dppx;
 
 html.dark {
   --text-color: #{$color-white};
+  --text-color-70: #{$color-white-70};
+
   --bg-color: #{$color-dark};
   --gray-color: #{$color-black};
 }
