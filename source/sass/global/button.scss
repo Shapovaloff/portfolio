@@ -25,11 +25,11 @@
         background-color: $color-primary-hover;
         background-color: var(--primary-color-hover);
       }
-
-      &:focus {
-        box-shadow: $bs-btn;
-      }
     }
+
+    // &:focus {
+    //   box-shadow: $bs-btn;
+    // }
   }
 
   &--transparent {
@@ -39,6 +39,36 @@
       &:hover {
         color: $color-primary;
         color: var(--primary-color);
+      }
+    }
+  }
+
+  &--primary-8 {
+    color: $color-primary;
+    color: var(--primary-color);
+    background-color: $color-primary-8;
+    background-color: var(--primary-color-8);
+
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $color-white;
+        color: var(--white-color);
+        background-color: $color-primary;
+        background-color: var(--primary-color);
+      }
+    }
+  }
+
+  &--opacity {
+    color: $color-primary;
+    color: var(--primary-color);
+
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $color-white;
+        color: var(--white-color);
+        background-color: $color-primary;
+        background-color: var(--primary-color);
       }
     }
   }

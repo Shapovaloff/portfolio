@@ -4,7 +4,7 @@
     position: relative;
     display: flex;
     margin-top: size(40px);
-    padding: size(24px);
+    padding: size(32px);
     background-color: $color-gray;
     background-color: var(--gray-color);
     border-radius: $border-radius;
@@ -77,7 +77,7 @@
 
   &__illustration {
     position: absolute;
-    right: size(24px);
-    bottom: size(24px);
+    right: size(32px);
+    bottom: size(32px);
   }
 }

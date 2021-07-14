@@ -1,0 +1,31 @@
+-
+  let worksList = [
+    {title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "card-work--rooblee"},
+    {title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "card-work--ostrovfortov"},
+    {title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "card-work--trikotazh"},
+    {title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "card-work--retailrocket"},
+  ]
+
+section.last-works
+  .last-works__contaner.container
+    h2.last-works__title.title.title--h2 Последние работы
+    ul.last-works__list
+      each worksItem in worksList
+        li.last-works__item.card-work(class=worksItem.class)
+          .card-work__container
+            h3.card-work__title.title.title--h3=worksItem.title
+            p.card-work__descr!=worksItem.descr
+            .card-work__btn-block
+              a(href=worksItem.linkSite, target="_blank", rel="nofollow").card-work__link.button.button--primary
+                span Перейти на сайт
+                +icon("icon-arrow-right-top", 24, 24)
+              a(href=worksItem.linkCase, target="_blank", rel="nofollow").card-work__link.button.button--opacity
+                span Читать кейс
+                +icon("icon-arrow-right", 24, 24)
+          .card-work__img-block
+            picture
+              img(src="img/card-work/" + worksItem.nameSrc + "@1x.png", srcset="img/card-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.nameSrc, width="700", height="400")
+
+    a(href="#!").last-works__link.button.button--primary-8
+      span Все работы
+      +icon("icon-arrow-right", 24, 24)

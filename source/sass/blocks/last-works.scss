@@ -1,0 +1,54 @@
+.last-works {
+  text-align: center;
+
+  &__title {
+    text-align: left;
+  }
+
+  &__list {
+    @include reset-list;
+    margin-top: size(40px);
+  }
+
+  &__link {
+    margin: size(60px) auto 0;
+  }
+}
+
+.card-work {
+  text-align: left;
+  min-height: 400px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: $border-radius;
+
+  &:not(:first-child) {
+    margin-top: size(32px);
+  }
+
+  &--rooblee {background-color: $rooblee;}
+  &--ostrovfortov {background-color: $ostrovfortov;}
+  &--trikotazh {background-color: $trikotazh;}
+  &--retailrocket {background-color: $retailrocket;}
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: size(32px) 0 size(32px) size(32px);
+    max-width: size(448px);
+  }
+
+  &__descr {
+    margin: size(16px) 0 0;
+    max-width: size(340px);
+  }
+
+  &__btn-block {
+    margin-top: auto;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: size(16px);
+  }
+}
