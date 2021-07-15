@@ -1,6 +1,8 @@
 .footer {
   background-color: $color-gray;
   background-color: var(--gray-color);
+  border-top: size(1px) solid $color-gray;
+  border-top: size(1px) solid var(--border-gray);
 
   &__container {
     padding-top: size(40px);

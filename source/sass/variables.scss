@@ -11,6 +11,7 @@ $color-gray:                      #F7F7FC;
 $color-gray-50:                   #E5E5EF;
 $color-white:                     #ffffff;
 $color-white-70:                  #BFC0C7;
+$color-white-15:                  rgba($color-white, .15);
 $color-white-light:               #F9FAFB;
 $color-transparent:               rgba(255, 255, 255, 0);
 
@@ -99,6 +100,9 @@ $retina-dppx:                       1.5dppx;
   --primary-color-8: #{$color-primary-8};
   --primary-color-30: #{$color-primary-30};
   --primary-color-50: #{$color-primary-50};
+
+
+  --border-gray: $color-gray;
 }
 
 html.dark {
@@ -106,5 +110,7 @@ html.dark {
   --text-color-70: #{$color-white-70};
 
   --bg-color: #{$color-dark};
-  --gray-color: #{$color-black};
+  --gray-color: #{$color-dark};
+
+  --border-gray: #{$color-white-15};
 }

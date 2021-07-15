@@ -33,3 +33,20 @@
     }
   }
 }
+
+.dark .social {
+  &__link {
+    border-color: transparent;
+    background-color: rgba($color-white, .1);
+
+    @media (min-width: 1024px) {
+      &:hover {background: $color-white;}
+      &--tg:hover {color: $tg;}
+      &--fb:hover {color: $fb;}
+      &--inst:hover {color: $inst;}
+      &--inst:hover path {fill: url(#paint0_radial);}
+      &--vk:hover {color: $vk;}
+      &--github:hover {color: $github;}
+    }
+  }
+}
