@@ -6,6 +6,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import themeChange from './modules/theme-change';
 import initAccordion from './modules/accordion';
+import scrollToElement from './modules/scroll-to-element';
+import smoothscroll from './vendor/smoothscroll.js';
 
 // ---------------------------------
 
@@ -30,6 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     initModals();
     themeChange();
+    scrollToElement();
+    smoothscroll.polyfill();
   });
 });
 

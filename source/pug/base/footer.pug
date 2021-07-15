@@ -1,10 +1,10 @@
 -
   let socialList = [
-    {icon: "icon-telegram", link: "", nameClass: "social__link--tg"},
-    {icon: "icon-fb", link: "", nameClass: "social__link--fb"},
-    {iconDark: "icon-inst-dark", link: "", nameClass: "social__link--inst"},
-    {icon: "icon-vk", link: "", nameClass: "social__link--vk"},
-    {icon: "icon-github", link: "", nameClass: "social__link--github"},
+    {icon: "icon-telegram", link: "https://t.me/Shapovaloff", nameClass: "social__link--tg"},
+    //- {icon: "icon-fb", link: "", nameClass: "social__link--fb"},
+    {iconDark: "icon-inst-dark", link: "https://www.instagram.com/mr.shapovaloff/", nameClass: "social__link--inst"},
+    {icon: "icon-vk", link: "https://vk.com/id342024332", nameClass: "social__link--vk"},
+    {icon: "icon-github", link: "https://github.com/Shapovaloff", nameClass: "social__link--github"},
   ]
 
 mixin footer(footerMods)
@@ -13,7 +13,7 @@ mixin footer(footerMods)
       ul.social
         each socialItem in socialList
           li.social__item
-            a(href="#!").social__link(class=socialItem.nameClass)
+            a(href=socialItem.link, target="_blank", rel="nofollow", class=socialItem.nameClass).social__link
               if (socialItem.icon)
                 +icon(socialItem.icon, 24, 24)
               else if (socialItem.iconDark)

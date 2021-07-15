@@ -50,13 +50,13 @@
     },
   ]
 
-section.technologies
+section.technologies#technologies
   .technologies__container.container
     h2.technologies__title.title.title--h2 Технологии
     .technologies__blok-list
       each techBlock in techBlocks
         .technologies__blok-item
-          h3.title.title--h4=techBlock.title
+          h3.title.title--h5=techBlock.title
           ul.technologies__list
             each techItem in techBlock.techList
               li.technologies__item
