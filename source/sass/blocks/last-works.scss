@@ -42,6 +42,8 @@
   &__descr {
     margin: size(16px) 0 0;
     max-width: size(340px);
+    color: $color-dark-600;
+    color: var(--text-color-gray-light);
   }
 
   &__btn-block {
@@ -52,3 +54,13 @@
     margin-right: size(16px);
   }
 }
+
+.dark .card-work {
+  &--rooblee,
+  &--ostrovfortov,
+  &--trikotazh,
+  &--retailrocket {
+    background-color: var(--color-card);
+  }
+}
+

@@ -24,8 +24,7 @@
 
     @media (min-width: 1024px) {
       &:hover {
-        color: $color-primary;
-        color: var(--primary-color);
+        color: $color-primary-500;
       }
     }
   }

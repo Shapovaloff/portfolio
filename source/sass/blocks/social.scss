@@ -15,8 +15,10 @@
     align-items: center;
     justify-content: center;
     border-radius: $border-radius;
-    border: 1px solid $color-gray-50;
+    border: 1px solid $color-dark-200;
     transition: color .2s, background .2s;
+    color: $color-dark-600;
+    color: var(--text-color-gray-light);
 
     & svg {
       width: 24px;
@@ -37,7 +39,7 @@
 .dark .social {
   &__link {
     border-color: transparent;
-    background-color: rgba($color-white, .1);
+    background-color: $color-dark-700;
 
     @media (min-width: 1024px) {
       &:hover {background: $color-white;}

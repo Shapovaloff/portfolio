@@ -32,8 +32,8 @@
     @media (min-width: 1024px) {
       &:hover {
         & .technologies__img-block {
-          background-color: $color-primary-30;
-          background-color: var(--primary-color-30);
+          background-color: $color-primary-200;
+          background-color: var(--color-card-hover);
         }
 
         & .technologies__text {
@@ -50,8 +50,8 @@
     align-items: center;
     justify-content: center;
     border-radius: $border-radius;
-    background-color: $color-primary-8;
-    background-color: var(--primary-color-8);
+    background-color: $color-dark-100;
+    background-color: var(--color-card);
     transition: background-color .2s;
   }
 
@@ -71,5 +71,6 @@
     position: absolute;
     bottom: 20px;
     right: 0;
+    pointer-events: none;
   }
 }

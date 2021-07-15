@@ -15,15 +15,12 @@
   }
 
   &--primary {
-    color: $color-white;
-    color: var(--white-color);
-    background-color: $color-primary;
-    background-color: var(--primary-color);
+    color: $color-dark-50;
+    background-color: $color-primary-500;
 
     @media (min-width: 1024px) {
       &:hover {
-        background-color: $color-primary-hover;
-        background-color: var(--primary-color-hover);
+        background-color: $color-primary-600;
       }
     }
 
@@ -37,38 +34,33 @@
 
     @media (min-width: 1024px) {
       &:hover {
-        color: $color-primary;
-        color: var(--primary-color);
+        color: $color-primary-500;
       }
     }
   }
 
-  &--primary-8 {
-    color: $color-primary;
-    color: var(--primary-color);
-    background-color: $color-primary-8;
-    background-color: var(--primary-color-8);
+  &--primary-100 {
+    color: $color-primary-500;
+    color: var(--color-primary-500);
+    background-color: $color-primary-100;
+    background-color: var(--color-border-blue);
 
     @media (min-width: 1024px) {
       &:hover {
-        color: $color-white;
-        color: var(--white-color);
-        background-color: $color-primary;
-        background-color: var(--primary-color);
+        color: $color-dark-50;
+        background-color: $color-primary-500;
       }
     }
   }
 
   &--opacity {
-    color: $color-primary;
-    color: var(--primary-color);
+    color: $color-primary-500;
+    color: var(--color-primary-500);
 
     @media (min-width: 1024px) {
       &:hover {
-        color: $color-white;
-        color: var(--white-color);
-        background-color: $color-primary;
-        background-color: var(--primary-color);
+        color: $color-dark-50;
+        background-color: $color-primary-500;
       }
     }
   }

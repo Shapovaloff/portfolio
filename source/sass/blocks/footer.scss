@@ -1,8 +1,9 @@
 .footer {
-  background-color: $color-gray;
-  background-color: var(--gray-color);
-  border-top: size(1px) solid $color-gray;
-  border-top: size(1px) solid var(--border-gray);
+  margin-top: size(80px);
+  background-color: $color-primary-50;
+  background-color: var(--bg-color-footer);
+  border-top: size(2px) solid $color-dark-700;
+  border-top: size(2px) solid var(--color-border-blue);
 
   &__container {
     padding-top: size(40px);
@@ -10,5 +11,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &__copyright {
+    color: $color-dark-600;
+    color: var(--text-color-gray-light);
   }
 }

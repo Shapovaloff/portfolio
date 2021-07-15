@@ -23,17 +23,12 @@
   &__text {
     margin-left: size(24px);
 
-    & h3 {
-      margin: 0;
-      font-size: size(20px);
-      line-height: 1.4;
-      font-weight: 700;
-    }
-
     & p {
       margin: size(12px) 0 0;
       font-size: 16px;
       line-height: 1.5;
+      color: $color-dark-400;
+      color: var(--text-color-gray);
     }
   }
 }

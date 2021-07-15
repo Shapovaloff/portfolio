@@ -26,7 +26,7 @@ section.career
     .career__wrapper
       .career__img-container
         .career__img-block
-          img(src="img/career/career-bg.svg", alt="tasks list")
+          +icon("icon-career-bg", width="570", height="408")
       ul.career__list(data-accordion="parent" data-type="single")
         each careerItem, index in careerList
           if (index === 0)

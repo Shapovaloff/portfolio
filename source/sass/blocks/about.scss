@@ -5,8 +5,8 @@
     display: flex;
     margin-top: size(40px);
     padding: size(32px);
-    background-color: $color-gray;
-    background-color: var(--gray-color);
+    background-color: $color-dark-100;
+    background-color: var(--color-card);
     border-radius: $border-radius;
   }
 
@@ -36,12 +36,11 @@
   &__info {
     display: flex;
     flex-direction: column;
+
     & h3 {
       margin: 0;
       font-size: size(24px);
       line-height: 1.4;
-      color: $color-dark;
-      color: var(--text-color);
     }
 
     ul {
@@ -79,5 +78,7 @@
     position: absolute;
     right: size(32px);
     bottom: size(32px);
+    color: $color-dark-700;
+    color: var(--text-color);
   }
 }
