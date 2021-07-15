@@ -1,0 +1,35 @@
+.social {
+  @include reset-list;
+  display: flex;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: size(8px);
+    }
+  }
+
+  &__link {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius;
+    border: 1px solid $color-gray-50;
+    transition: color .2s, background .2s;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: 1024px) {
+      &:hover {color: $color-white;}
+      &--tg:hover {background: $tg;}
+      &--fb:hover {background: $fb;}
+      &--inst:hover {background: $inst;}
+      &--vk:hover {background: $vk;}
+      &--github:hover {background: $github;}
+    }
+  }
+}

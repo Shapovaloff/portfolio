@@ -1,2 +1,18 @@
+-
+  let socialList = [
+    {icon: "icon-telegram", link: "", nameClass: "social__link--tg"},
+    {icon: "icon-fb", link: "", nameClass: "social__link--fb"},
+    {icon: "icon-inst", link: "", nameClass: "social__link--inst"},
+    {icon: "icon-vk", link: "", nameClass: "social__link--vk"},
+    {icon: "icon-github", link: "", nameClass: "social__link--github"},
+  ]
+
 mixin footer(footerMods)
   footer.footer(class=footerMods)
+    .footer__container.container
+      ul.social
+        each socialItem in socialList
+          li.social__item
+            a(href="#!").social__link(class=socialItem.nameClass)
+              +icon(socialItem.icon, 24, 24)
+      p.footer__copyright © Юрий Шаповалов, 2020 - 2021

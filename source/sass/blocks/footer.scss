@@ -1,3 +1,12 @@
 .footer {
-  min-height: 100px;
+  background-color: $color-gray;
+  background-color: var(--gray-color);
+
+  &__container {
+    padding-top: size(40px);
+    padding-bottom: size(40px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
