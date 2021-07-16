@@ -4,8 +4,8 @@
       title: "Основные",
       nameBlock: "main",
       techList: [
-        {nameSrc: "html", text: "Html"},
-        {nameSrc: "css", text: "Css"},
+        {nameSvg:"icon-html", text: "Html"},
+        {nameSvg:"icon-css", text: "Css"},
         {nameSrc: "js", text: "JavaScript"},
         {nameSrc: "react", text: "React"},
       ],
@@ -16,7 +16,7 @@
       techList: [
         {nameSrc: "pagespeed", text: "PageSpeed"},
         {nameSrc: "lighthouse", text: "Lighthouse"},
-        {nameSrc: "w3c", text: "W3C"},
+        {nameSvg: "icon-w3c", text: "W3C"},
       ],
     },
     {
@@ -61,7 +61,11 @@ section.technologies#technologies
             each techItem in techBlock.techList
               li.technologies__item
                 .technologies__img-block
-                  img(src="img/technologies/"+ techBlock.nameBlock +"/"+ techItem.nameSrc +".svg", alt=techItem.text)
+                  if (techItem.nameSrc)
+                    img(src="img/technologies/"+ techBlock.nameBlock +"/"+ techItem.nameSrc +".svg", alt=techItem.text)
+                  else if (techItem.nameSvg)
+                    +icon(techItem.nameSvg, 56, 56)
+
                 p.technologies__text=techItem.text
     .technologies__bg-img
       +icon("icon-technologies-bg", width="470", height="320")
