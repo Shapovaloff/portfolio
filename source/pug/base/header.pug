@@ -19,10 +19,8 @@ mixin header(headerMods, currentPage)
         ul.main-nav__list
           each link, index in headerLinks
             li.main-nav__item
-              if(index === currentPage)
-                a.main-nav__link.main-nav__link--active=link.text
-              else
-                a.main-nav__link(href=link.href)=link.text
+              a.main-nav__link(href=link.href, data-toggle-menu="link")=link.text
+
 
       .header__toggle.theme-switcher
         input(type="checkbox", aria-label="смена темы", name="color-theme", id="color-theme", class="visually-hidden")

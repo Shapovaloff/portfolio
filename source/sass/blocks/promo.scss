@@ -41,6 +41,8 @@
     bottom: size(100px);
     width: size(770px);
     height: auto;
+    color: $color-primary-50;
+    color: var(--bg-color-footer);
 
     & svg {
       max-width: 100%;

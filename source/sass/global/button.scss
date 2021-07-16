@@ -70,4 +70,8 @@
       }
     }
   }
+
+  &--no-bg {
+    background-color: rgba($color-primary-300, .4);
+  }
 }

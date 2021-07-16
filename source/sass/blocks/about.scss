@@ -152,7 +152,8 @@
     right: size(32px);
     bottom: size(32px);
     color: $color-dark-700;
-    color: var(--text-color);
+    color: var(--color-gray-card);
+
     & svg {
       max-width: 100%;
       height: auto;

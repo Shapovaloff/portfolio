@@ -31,6 +31,8 @@
     position: sticky;
     top: size(92px);
     width: 100%;
+    color: $color-dark-700;
+    color: var(--color-gray-card);
 
     & svg {
       max-width: 100%;

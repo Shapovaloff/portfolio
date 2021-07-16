@@ -57,12 +57,16 @@
     width: 32px;
     height: 32px;
     margin-left: 24px;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     -webkit-tap-highlight-color: rgba(255,255,255,0);
     -webkit-tap-highlight-color: transparent;
+
+    @include vp--767 {
+      display: flex;
+    }
 
     & span {
       content: "";

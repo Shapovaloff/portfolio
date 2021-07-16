@@ -394,6 +394,7 @@ template {
   --color-card-hover: #C7D2FE;
   --color-border: #E5E7EB;
   --color-border-blue: #E0E7FF;
+  --color-gray-card: #374151;
   --color-primary-500: #6366F1;
   --color-primary-200: #C7D2FE;
 }
@@ -408,6 +409,7 @@ html.dark {
   --bg-color: #111827;
   --color-border: #E5E7EB;
   --color-border-blue: #374151;
+  --color-gray-card: #6B7280;
   --color-primary-500: #F8FAFC;
   --color-primary-200: #6B7280;
 }
@@ -770,6 +772,10 @@ button,
   color: var(--color-primary-500);
 }
 
+.button--no-bg {
+  background-color: rgba(165, 180, 252, 0.4);
+}
+
 [data-accordion="element"].is-open > [data-accordion="content"] {
   max-height: 100%;
 }
@@ -865,9 +871,7 @@ button,
   width: 32px;
   height: 32px;
   margin-left: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1038,6 +1042,8 @@ button,
   bottom: 6.25rem;
   width: 48.125rem;
   height: auto;
+  color: #EFF6FF;
+  color: var(--bg-color-footer);
 }
 
 .promo__img-block svg {
@@ -1273,7 +1279,7 @@ button,
   right: 2rem;
   bottom: 2rem;
   color: #374151;
-  color: var(--text-color);
+  color: var(--color-gray-card);
 }
 
 .about__illustration svg {
@@ -1362,6 +1368,10 @@ button,
   margin-right: 1rem;
 }
 
+.card-work__img-block {
+  max-width: 43.75rem;
+}
+
 .card-work__img-block img {
   width: 100%;
 }
@@ -1389,6 +1399,8 @@ button,
   position: sticky;
   top: 5.75rem;
   width: 100%;
+  color: #374151;
+  color: var(--color-gray-card);
 }
 
 .career__img-block svg {
@@ -1576,6 +1588,8 @@ button,
   bottom: 20px;
   right: 0;
   pointer-events: none;
+  color: #374151;
+  color: var(--color-gray-card);
 }
 
 .technologies__bg-img svg {
@@ -2025,13 +2039,10 @@ button,
   }
 
   .card-work__container {
-    padding: 0 1.5rem 1.5rem;
+    padding: 1.5rem;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
-  }
-
-  .card-work__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2145,6 +2156,12 @@ button,
   .header__logo {
     width: 2.5rem;
     height: 2.5rem;
+  }
+
+  .header__btn-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .main-nav {

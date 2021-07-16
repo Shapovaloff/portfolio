@@ -23,8 +23,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // polyfillObjectFit();
 
   iosVhFix();
+  themeChange();
   initAccordion();
   initToggleMenu();
+
 
   // Modules
   // ---------------------------------
@@ -33,7 +35,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
-    themeChange();
     scrollToElement();
     smoothscroll.polyfill();
   });
