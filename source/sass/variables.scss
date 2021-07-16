@@ -66,11 +66,13 @@ $github:                          #24292E;
   --color-border-blue: #{$color-primary-100};
 
   --color-primary-500: #{$color-primary-500};
+  --color-primary-200: #{$color-primary-200};
+
 }
 
 html.dark {
   --text-color: #{$color-dark-100};
-  --text-color-gray: #{$color-dark-600};
+  --text-color-gray: #{$color-dark-400};
   --text-color-gray-light: #{$color-dark-200};
 
   --color-card: #{$color-dark-800};
@@ -81,7 +83,7 @@ html.dark {
   --color-border-blue: #{$color-dark-700};
 
   --color-primary-500: #{$color-dark-50};
-
+  --color-primary-200: #{$color-dark-500};
 }
 
 

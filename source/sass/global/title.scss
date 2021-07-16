@@ -64,6 +64,14 @@
     font-weight: 700;
     font-size: size(28px);
     line-height: 1.4;
+
+    @include vp--767 {
+      font-size: size(24px);
+    }
+
+    @include vp--767 {
+      font-size: size(20px);
+    }
   }
 
   &--h6 {

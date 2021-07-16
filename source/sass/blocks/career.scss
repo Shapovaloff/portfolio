@@ -2,26 +2,70 @@
   &__wrapper {
     margin-top: size(40px);
     display: flex;
+
+    @include vp--1023 {
+      margin-top: size(32px);
+      flex-direction: column;
+    }
+
+    @include vp--767 {
+      margin-top: size(24px);
+    }
   }
 
   &__img-container {
     width: calc(55% - 15px);
     margin-right: size(30px);
+
+    @include vp--1279 {
+      width: calc(45% - 15px);
+    }
+
+    @include vp--1023 {
+      width: 100%;
+      max-width: size(720px);
+    }
   }
 
   &__img-block {
     position: sticky;
     top: size(92px);
+    width: 100%;
+
+    & svg {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   &__list {
     @include reset-list;
     width: calc(45% - 15px);
+
+    @include vp--1279 {
+      width: calc(55% - 15px);
+    }
+
+    @include vp--1023 {
+      width: calc(100% - 16px);
+      max-width: size(720px);
+      margin-left: size(16px);
+    }
+
+    @include vp--767 {
+      margin-top: size(16px);
+      margin-left: size(4px);
+      width: calc(100% - 4px);
+    }
   }
 
   &__item {
     position: relative;
     padding-left: size(72px);
+
+    @include vp--767 {
+      padding-left: size(60px);
+    }
 
     &::after,
     &:not(:first-child)::before {
@@ -33,7 +77,14 @@
       height: calc(100% - 72px);
       width: size(2px);
       background-color: $color-primary-200;
+      background-color: var(--color-primary-200);
       z-index: 4;
+
+      @include vp--767 {
+        height: calc(100% - 60px);
+        top: size(84px);
+        left: size(29px);
+      }
     }
 
     &:not(:first-child)::before {
@@ -55,6 +106,10 @@
         color: $color-dark-50;
         border-color: $color-primary-500;
         background-color: $color-primary-500;
+
+        @include vp--767 {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -65,6 +120,10 @@
     padding: size(36px);
     cursor: pointer;
 
+    @include vp--767 {
+      padding: size(24px) 0 size(24px) size(16px);
+    }
+
     p {
       margin: 0 0;
       color: $color-dark-400;
@@ -72,12 +131,10 @@
     }
 
     @media (min-width: 1024px) {
-
-    }
-
-    &:hover {
-      & .career__icon {
-        border-color: $color-primary-500;
+      &:hover {
+        & .career__icon {
+          border-color: $color-primary-500;
+        }
       }
     }
   }
@@ -92,17 +149,31 @@
     width: size(72px);
     height: size(72px);
     color: $color-primary-500;
+    background-color: $color-primary-50;
+    background-color: var(--bg-color-footer);
     border: 2px solid $color-primary-200;
+    border: 2px solid var(--color-primary-200);
     z-index: 5;
     border-radius: 50%;
     transition: all 0.2s;
     transition-delay: 0s;
+
+    @include vp--767 {
+      top: size(24px);
+      width: size(60px);
+      height: size(60px);
+    }
   }
 
   &__content-wrapper {
     padding: 0 size(36px) size(16px) size(36px);
+
     & p {
       margin: 0;
+    }
+
+    @include vp--767 {
+      padding: 0 0 size(16px) size(16px);
     }
   }
 }
