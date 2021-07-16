@@ -8,22 +8,46 @@
   &__list {
     @include reset-list;
     margin-top: size(40px);
+
+    @include vp--1023 {
+      margin-top: size(32px);
+    }
+
+    @include vp--767 {
+      margin-top: size(24px);
+    }
   }
 
   &__link {
     margin: size(60px) auto 0;
+
+    @include vp--767 {
+      margin: size(40px) auto 0;
+    }
   }
 }
 
 .card-work {
   text-align: left;
-  min-height: 400px;
+  min-height: size(400px);
   display: flex;
   justify-content: space-between;
   border-radius: $border-radius;
 
   &:not(:first-child) {
     margin-top: size(32px);
+  }
+
+  @include vp--1279 {
+    min-height: size(320px);
+  }
+
+  @include vp--1023 {
+    flex-direction: column;
+  }
+
+  @include vp--767 {
+    padding: size(16px);
   }
 
   &--rooblee {background-color: $rooblee;}
@@ -37,6 +61,25 @@
     align-items: flex-start;
     padding: size(32px) 0 size(32px) size(32px);
     max-width: size(448px);
+
+    @include vp--1023 {
+      padding: 0 size(24px) size(24px);
+      order: 1;
+    }
+
+    @include vp--1023 {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: 100%;
+      justify-content: space-between;
+    }
+
+    @include vp--767 {
+      flex-direction: column;
+      padding: 0;
+      margin-top: size(24px);
+    }
   }
 
   &__descr {
@@ -44,14 +87,71 @@
     max-width: size(340px);
     color: $color-dark-600;
     color: var(--text-color-gray-light);
+
+    @include vp--767 {
+      margin-top: size(8px);
+    }
   }
 
   &__btn-block {
     margin-top: auto;
+
+    @include vp--1279 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include vp--1023 {
+      align-items: flex-end;
+    }
+
+    @include vp--767 {
+      width: 100%;
+      margin-top: size(24px);
+    }
   }
 
-  &__link:not(:last-child) {
-    margin-right: size(16px);
+  &__link {
+    &:not(:last-child) {
+      margin-right: size(16px);
+
+      @include vp--1279 {
+        order: 1;
+        margin-right: 0;
+        margin-top: size(16px);
+      }
+
+      @include vp--767 {
+        margin-top: size(12px);
+      }
+    }
+
+    @include vp--767 {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__img-block {
+    @include vp--1279 {
+      max-width: size(680px);
+    }
+
+    & img {
+      width: 100%;
+    }
+
+    @include vp--1023 {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include vp--767 {
+      border-radius: $border-radius;
+      overflow: hidden;
+      box-shadow: $bs-card;
+    }
   }
 }
 

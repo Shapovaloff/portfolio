@@ -13,8 +13,9 @@ section.last-works#last-works
       each worksItem in worksList
         li.last-works__item.card-work(class=worksItem.class)
           .card-work__container
-            h3.card-work__title.title.title--h3=worksItem.title
-            p.card-work__descr!=worksItem.descr
+            .card-work__info
+              h3.card-work__title.title.title--h3=worksItem.title
+              p.card-work__descr!=worksItem.descr
             .card-work__btn-block
               a(href=worksItem.linkSite, target="_blank", rel="nofollow").card-work__link.button.button--primary
                 span Перейти на сайт
@@ -24,6 +25,7 @@ section.last-works#last-works
                 +icon("icon-arrow-right", 24, 24)
           .card-work__img-block
             picture
+              source(media="(max-width: 767px)", srcset="img/card-work/" + worksItem.nameSrc + "-mobile@1x.png 1x, img/card-work/" + worksItem.nameSrc + "-mobile@2x.png 2x")
               img(src="img/card-work/" + worksItem.nameSrc + "@1x.png", srcset="img/card-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.nameSrc, width="700", height="400")
 
     a(href="#!").last-works__link.button.button--primary-100

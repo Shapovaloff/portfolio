@@ -57,6 +57,12 @@
     color: $color-primary-500;
     color: var(--color-primary-500);
 
+    @include vp--1023 {
+      background-color: rgba($color-primary-300, .4);
+      color: $color-primary-500;
+      color: var(--color-primary-500);
+    }
+
     @media (min-width: 1024px) {
       &:hover {
         color: $color-dark-50;
