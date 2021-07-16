@@ -6,11 +6,11 @@
   border-top: size(2px) solid var(--color-border-blue);
 
   @include vp--1023 {
-    margin-top: size(60px);
+    margin-top: size(40px);
   }
 
   @include vp--767 {
-    margin-top: size(40px);
+    margin-top: 0;
   }
 
   &__container {

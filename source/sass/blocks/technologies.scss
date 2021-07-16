@@ -146,7 +146,8 @@
     }
 
     @include vp--767 {
-      margin-top: size(48px);
+      margin-top: size(24px);
+      width: 100%;
     }
   }
 }

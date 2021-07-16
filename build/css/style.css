@@ -878,6 +878,8 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header__btn-menu span {
@@ -973,6 +975,8 @@ button,
   cursor: pointer;
   -webkit-transition: border-color .2s;
   transition: border-color .2s;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .theme-switcher__toggle svg {
@@ -2095,7 +2099,7 @@ button,
   }
 
   .footer {
-    margin-top: 3.75rem;
+    margin-top: 2.5rem;
   }
 }
 
@@ -2207,11 +2211,19 @@ button,
     position: relative;
     bottom: 0;
     width: 100%;
-    margin-top: 32px;
+    margin-top: 48px;
   }
 
   .promo__title {
     margin-bottom: 0;
+  }
+
+  .promo__button {
+    width: 100%;
+    margin: 1.5rem 0 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 
   .advantages__list {
@@ -2263,12 +2275,16 @@ button,
   }
 
   .about__info {
-    margin-top: 2.25rem;
+    margin-top: 3rem;
   }
 
   .about__info h3 {
     font-size: 1.625rem;
     line-height: 1.4;
+  }
+
+  .about__info ul {
+    margin-top: 1rem;
   }
 
   .about__info li:not(:first-child) {
@@ -2280,7 +2296,7 @@ button,
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
 
   .last-works__list {
@@ -2301,16 +2317,16 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 0;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .card-work__descr {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .card-work__btn-block {
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .card-work__link:not(:last-child) {
@@ -2415,11 +2431,12 @@ button,
   }
 
   .technologies__bg-img {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
+    width: 100%;
   }
 
   .footer {
-    margin-top: 2.5rem;
+    margin-top: 0;
   }
 
   .footer__container {

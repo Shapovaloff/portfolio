@@ -61,7 +61,7 @@
       position: relative;
       bottom: 0;
       width: 100%;
-      margin-top: 32px;
+      margin-top: 48px;
     }
   }
 
@@ -81,6 +81,12 @@
 
   &__button {
     margin: size(32px) 0 0;
+
+    @include vp--767 {
+      width: 100%;
+      margin: size(24px) 0 0;
+      justify-content: center;
+    }
   }
 
   &__animate {

@@ -85,7 +85,7 @@
     align-items: flex-start;
 
     @include vp--767 {
-      margin-top: size(36px);
+      margin-top: size(48px);
     }
 
     & h3 {
@@ -103,6 +103,10 @@
       @include reset-list;
       margin-top: size(24px);
       margin-bottom: auto;
+
+      @include vp--767 {
+        margin-top: size(16px);
+      }
     }
 
     li {
@@ -139,7 +143,7 @@
     @include vp--767 {
       width: 100%;
       justify-content: center;
-      margin-top: size(32px);
+      margin-top: size(40px);
     }
   }
 
