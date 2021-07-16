@@ -1,10 +1,10 @@
 mixin header(headerMods, currentPage)
   -
     var headerLinks = [
-      {href: "#about", text: "Обо мне"},
-      {href: "#last-works", text: "Последние работы"},
-      {href: "#career", text: "Карьера"},
-      {href: "#technologies", text: "Технологии"},
+      {svgName: "icon-user", href: "#about", text: "Обо мне"},
+      {svgName: "icon-layout-panel", href: "#last-works", text: "Последние работы"},
+      {svgName: "icon-chart", href: "#career", text: "Опыт"},
+      {svgName: "icon-terminal", href: "#technologies", text: "Технологии"},
     ]
 
   header.header(class=headerMods)
@@ -19,8 +19,10 @@ mixin header(headerMods, currentPage)
         ul.main-nav__list
           each link, index in headerLinks
             li.main-nav__item
-              a.main-nav__link(href=link.href, data-toggle-menu="link")=link.text
-
+              a.main-nav__link(href=link.href, data-toggle-menu="link")
+                if (link.svgName)
+                  +icon(link.svgName, 24, 24)
+                span=link.text
 
       .header__toggle.theme-switcher
         input(type="checkbox", aria-label="смена темы", name="color-theme", id="color-theme", class="visually-hidden")

@@ -389,7 +389,7 @@ template {
   --text-color-gray: #9CA3AF;
   --text-color-gray-light: #4B5563;
   --bg-color: #ffffff;
-  --bg-color-footer: #EFF6FF;
+  --bg-color-footer: #F3F4F6;
   --color-card: #F3F4F6;
   --color-card-hover: #C7D2FE;
   --color-border: #E5E7EB;
@@ -943,11 +943,15 @@ button,
 .main-nav__link {
   position: relative;
   display: block;
-  padding: 0.25rem 0rem;
+  padding: 0.25rem 0;
   font-size: 1.125rem;
   line-height: 1.5;
   -webkit-transition: color .2s;
   transition: color .2s;
+}
+
+.main-nav__link svg {
+  display: none;
 }
 
 .theme-switcher {
@@ -2171,7 +2175,7 @@ button,
     background-color: #F8FAFC;
     background-color: var(--bg-color-footer);
     right: 0;
-    padding: 2.5rem 1.5rem;
+    padding: 3.125rem 1.5rem;
     margin-right: 0;
     -webkit-transform: translateX(101%);
     transform: translateX(101%);
@@ -2180,7 +2184,7 @@ button,
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
     width: 100%;
-    max-width: 15.625rem;
+    max-width: 18.75rem;
   }
 
   .main-nav.active {
@@ -2193,9 +2197,37 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .main-nav__item {
+    width: 100%;
+  }
+
+  .main-nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .main-nav__link {
+    padding: 0.625rem 0;
+    width: 100%;
+    border-bottom: 1px solid #9CA3AF;
+    font-size: 1.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .main-nav__link svg {
+    display: block;
+    margin-right: 0.5rem;
+    color: #6366F1;
   }
 
   .theme-switcher__toggle {
