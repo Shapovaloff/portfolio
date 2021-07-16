@@ -3,6 +3,17 @@
   min-height: 650px;
   max-height: 900px;
 
+  @include vp--1279 {
+    min-height: 640px;
+    max-height: 700px;
+  }
+
+  @include vp--767 {
+    min-height: auto;
+    max-height: 100%;
+    height: auto;
+  }
+
   &__container {
     position: relative;
     height: 100%;
@@ -11,18 +22,46 @@
     justify-content: center;
     align-items: flex-start;
     padding-bottom: 200px;
+
+    @include vp--1023 {
+      justify-content: flex-start;
+      padding-top: size(60px);
+      padding-bottom: size(60px);
+    }
+
+    @include vp--767 {
+      padding-top: size(60px);
+      padding-bottom: size(60px);
+    }
   }
 
   &__img-block {
     position: absolute;
     right: 0;
-    bottom: 100px;
-    width: 770px;
+    bottom: size(100px);
+    width: size(770px);
+    height: auto;
 
-    & img {
+    & svg {
+      max-width: 100%;
       width: 100%;
       height: 100%;
       object-fit: contain;
+    }
+
+    @include vp--1279 {
+      width: size(650px);
+    }
+
+    @include vp--1023 {
+      bottom: size(60px);
+    }
+
+    @include vp--767 {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 32px;
     }
   }
 
@@ -34,6 +73,10 @@
 
   &__title {
     margin-bottom: size(8px);
+
+    @include vp--767 {
+      margin-bottom: 0;
+    }
   }
 
   &__button {

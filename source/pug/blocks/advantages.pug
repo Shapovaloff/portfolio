@@ -11,7 +11,8 @@ section.advantages
     ul.advantages__list
       each advantagesItem in advantagesList
         li.advantages__item
-          img(src="../../img/advantages/" + advantagesItem.srcName + ".svg", alt=advantagesItem.srcName)
+          .advantages__img-block
+            img(src="img/advantages/" + advantagesItem.srcName + ".svg", alt=advantagesItem.srcName)
           .advantages__text
             h3.title.title--h6=advantagesItem.title
             p=advantagesItem.text

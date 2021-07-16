@@ -9,16 +9,46 @@
   &--h1 {
     font-size: size(68px);
     line-height: 1.3;
+
+    @include vp--1279 {
+      font-size: size(62px);
+    }
+
+    @include vp--1023 {
+      font-size: size(56px);
+    }
+
+    @include vp--767 {
+      font-size: size(34px);
+      line-height: 1.5;
+    }
   }
 
   &--h2 {
     font-weight: 700;
     font-size: size(54px);
+
+    @include vp--1279 {
+      font-size: size(50px);
+    }
   }
 
   &--h3 {
     font-weight: 700;
     font-size: size(42px);
+
+    @include vp--1279 {
+      font-size: size(38px);
+    }
+
+    @include vp--1023 {
+      font-size: size(32px);
+
+    }
+
+    @include vp--767 {
+      font-size: size(26px);
+    }
   }
 
   &--h4 {
@@ -36,5 +66,9 @@
     font-weight: 700;
     font-size: size(24px);
     line-height: 1.5;
+
+    @include vp--767 {
+      font-size: size(20px);
+    }
   }
 }
