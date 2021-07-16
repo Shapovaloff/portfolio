@@ -1190,7 +1190,7 @@ button,
   bottom: -1.875rem;
   left: -2.5rem;
   width: 9.0625rem;
-  height: 6.625rem;
+  height: auto;
   z-index: 1;
 }
 
@@ -1231,6 +1231,7 @@ button,
   padding: 0;
   list-style-type: none;
   margin-top: 1.5rem;
+  margin-bottom: auto;
 }
 
 .about__info li {
@@ -1255,7 +1256,7 @@ button,
 }
 
 .about__link {
-  margin-top: auto;
+  margin-top: 1.5rem;
 }
 
 .about__illustration {
@@ -1264,6 +1265,11 @@ button,
   bottom: 2rem;
   color: #374151;
   color: var(--text-color);
+}
+
+.about__illustration svg {
+  max-width: 100%;
+  height: auto;
 }
 
 .last-works {
@@ -1897,6 +1903,29 @@ button,
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .about__wrapper {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .about__points {
+    width: 7.5rem;
+    bottom: -1.25rem;
+    left: -1.25rem;
+  }
+
+  .about__photo-block {
+    width: 15rem;
+    margin-right: 2rem;
+  }
+
+  .about__illustration {
+    display: none;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    width: 10rem;
+  }
+
   .footer {
     margin-top: 3.75rem;
   }
@@ -1914,6 +1943,10 @@ button,
   .title--h1 {
     font-size: 2.125rem;
     line-height: 1.5;
+  }
+
+  .title--h2 {
+    font-size: 2.125rem;
   }
 
   .title--h3 {
@@ -2017,6 +2050,57 @@ button,
 
   .advantages__text p {
     margin: 0.5rem 0 0;
+  }
+
+  .about__wrapper {
+    margin-top: 1.5rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .about__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .about__points {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 9.375rem;
+    margin-left: -56px;
+    margin-bottom: -32px;
+  }
+
+  .about__photo-block {
+    width: auto;
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .about__info {
+    margin-top: 2.25rem;
+  }
+
+  .about__info h3 {
+    font-size: 1.625rem;
+    line-height: 1.4;
+  }
+
+  .about__info li:not(:first-child) {
+    margin-top: 0.25rem;
+  }
+
+  .about__link {
+    margin-top: 2rem;
   }
 
   .footer {

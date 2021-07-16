@@ -8,6 +8,25 @@
     background-color: $color-dark-100;
     background-color: var(--color-card);
     border-radius: $border-radius;
+
+    @include vp--1023 {
+      padding: size(24px);
+      margin-top: size(32px);
+
+    }
+
+    @include vp--767 {
+      margin-top: size(24px);
+      flex-direction: column;
+      padding: size(16px);
+    }
+  }
+
+  &__block {
+    @include vp--767 {
+      display: flex;
+      align-items: flex-end;
+    }
   }
 
   &__points {
@@ -15,8 +34,24 @@
     bottom: size(-30px);
     left: size(-40px);
     width: size(145px);
-    height: size(106px);
+    height: auto;
     z-index: 1;
+
+    @include vp--1023 {
+      width: size(120px);
+      bottom: size(-20px);
+      left: size(-20px);
+    }
+
+    @include vp--767 {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: size(150px);
+      margin-left: -56px;
+      margin-bottom: -32px;
+    }
   }
 
   &__photo-block {
@@ -31,21 +66,42 @@
       height: 100%;
       object-fit: cover;
     }
+
+    @include vp--1023 {
+      width: size(240px);
+      margin-right: size(32px);
+    }
+
+    @include vp--767 {
+      width: auto;
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__info {
     display: flex;
     flex-direction: column;
 
+    @include vp--767 {
+      margin-top: size(36px);
+    }
+
     & h3 {
       margin: 0;
       font-size: size(24px);
       line-height: 1.4;
+
+      @include vp--767 {
+        font-size: size(26px);
+        line-height: 1.4;
+      }
     }
 
     ul {
       @include reset-list;
       margin-top: size(24px);
+      margin-bottom: auto;
     }
 
     li {
@@ -54,6 +110,12 @@
 
       &:not(:first-child) {
         margin-top: size(8px);
+      }
+
+      @include vp--767 {
+        &:not(:first-child) {
+          margin-top: size(4px);
+        }
       }
 
       &::after {
@@ -71,7 +133,11 @@
   }
 
   &__link {
-    margin-top: auto;
+    margin-top: size(24px);
+
+    @include vp--767 {
+      margin-top: size(32px);
+    }
   }
 
   &__illustration {
@@ -80,5 +146,16 @@
     bottom: size(32px);
     color: $color-dark-700;
     color: var(--text-color);
+    & svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include vp--1023 {
+      display: none;
+      right: size(8px);
+      bottom: size(8px);
+      width: size(160px);
+    }
   }
 }
