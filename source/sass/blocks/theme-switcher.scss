@@ -17,6 +17,12 @@
     cursor: pointer;
     transition: border-color .2s;
 
+    @include vp--767 {
+      width: size(60px);
+      height: size(30px);
+      padding: size(2px);
+    }
+
     & svg {
       width: size(24px);
       height: size(24px);
@@ -31,19 +37,29 @@
       left: 0;
       top: 0;
       height: 100%;
-      width: 36px;
+      width: size(36px);
       background-color: $color-primary-500;
       pointer-events: none;
       transition: transform .3s, background-color .2s;
+
+      @include vp--767 {
+        width: size(32px);
+      }
     }
   }
 
   & input:checked + .theme-switcher__toggle::after {
     transform: translateX(size(32px));
+
+    @include vp--767 {
+      transform: translateX(size(28px));
+    }
   }
 
-  & input:focus + .theme-switcher__toggle {
-    box-shadow: $bs-btn;
+  @media (min-width: 1024px) {
+    & input:focus + .theme-switcher__toggle {
+      box-shadow: $bs-btn;
+    }
   }
 
   @media (min-width: 1024px) {

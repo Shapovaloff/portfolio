@@ -8,6 +8,7 @@ import themeChange from './modules/theme-change';
 import initAccordion from './modules/accordion';
 import scrollToElement from './modules/scroll-to-element';
 import smoothscroll from './vendor/smoothscroll.js';
+import initToggleMenu from './modules/toggle-menu';
 
 // ---------------------------------
 
@@ -23,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initAccordion();
+  initToggleMenu();
 
   // Modules
   // ---------------------------------

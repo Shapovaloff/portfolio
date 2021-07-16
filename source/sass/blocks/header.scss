@@ -21,16 +21,78 @@
     padding-bottom: size(16px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    @include vp--1023 {
+      padding-top: size(16px);
+      padding-bottom: size(16px);
+    }
+
+    @include vp--767 {
+      padding-top: size(12px);
+      padding-bottom: size(12px);
+    }
   }
 
   &__logo {
     color: $color-primary-500;
     width: size(48px);
     height: size(48px);
+    margin-right: auto;
 
     & svg {
       display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    @include vp--767 {
+      width: size(40px);
+      height: size(40px);
+    }
+  }
+
+  &__btn-menu {
+    @include reset-btn;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & span {
+      content: "";
+      width: 30px;
+      height: 4px;
+      border-radius: 4px;
+      display: block;
+      background-color: $color-primary-500;
+      margin-bottom: 7px;
+      transition: .2s;
+
+      &:last-child {
+        margin-bottom: 0;
+        width: 22px;
+        margin-left: 8px;
+        opacity: .3;
+      }
+    }
+
+    &.active {
+      & span {
+        transform: rotate(-45deg);
+        margin: 0;
+        width: 30px;
+
+        &:last-child {
+          transform: rotate(45deg);
+          width: 30px;
+          margin: 0;
+          margin-top: -4px;
+        }
+      }
     }
   }
 }
