@@ -60,6 +60,8 @@ $github:                          #24292E;
   --text-color-gray-light: #{$color-dark-600};
 
   --bg-color: #{$color-white};
+  --bg-primary-50: #{$color-primary-50};
+
   --bg-color-footer: #{$color-dark-100};
   --color-card: #{$color-dark-100};
   --color-card-hover: #{$color-primary-200};
@@ -79,6 +81,8 @@ html.dark {
   --text-color-gray-light: #{$color-dark-200};
 
   --color-card: #{$color-dark-800};
+  --bg-primary-50: #{$color-dark-800};
+
   --bg-color-footer: #{$color-dark-800};
   --color-card-hover: #{$color-dark-50};
   --bg-color: #{$color-dark-900};
@@ -98,7 +102,7 @@ html.dark {
 // Typography
 //---------------------------------
 
-$font-main:                          "Lato", "Arial", sans-serif;
+$font-main:                          "Inter", "Arial", sans-serif;
 $font-size-main:                     16px;
 
 // https://www.artlebedev.ru/kovodstvo/sections/159/

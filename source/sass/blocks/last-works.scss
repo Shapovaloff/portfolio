@@ -60,7 +60,7 @@
     flex-direction: column;
     align-items: flex-start;
     padding: size(32px) 0 size(32px) size(32px);
-    max-width: size(448px);
+    max-width: size(454px);
 
     @include vp--1023 {
       padding: size(24px);

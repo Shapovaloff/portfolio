@@ -1,0 +1,17 @@
+.protfolio-main {
+  background-color: $color-primary-50;
+  background-color: var(--bg-primary-50);
+
+  &__container {
+    padding-top: size(40px);
+    padding-bottom: size(40px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__img-block {
+    color: $color-dark-700;
+    color: var(--color-gray-card);
+  }
+}
