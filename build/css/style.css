@@ -396,6 +396,7 @@ template {
   --color-border: #E5E7EB;
   --color-border-blue: #E0E7FF;
   --color-gray-card: #374151;
+  --color-card-protfolio: #ffffff;
   --color-primary-500: #6366F1;
   --color-primary-200: #C7D2FE;
 }
@@ -412,6 +413,7 @@ html.dark {
   --color-border: #E5E7EB;
   --color-border-blue: #374151;
   --color-gray-card: #6B7280;
+  --color-card-protfolio: #374151;
   --color-primary-500: #F8FAFC;
   --color-primary-200: #6B7280;
 }
@@ -608,6 +610,10 @@ button,
   min-height: calc(100 * var(--vh, 1vh));
 }
 
+.wrapper--hidden {
+  overflow: hidden;
+}
+
 .wrapper--no-scrollbar {
   height: 100vh;
   /* stylelint-disable-next-line */
@@ -714,7 +720,8 @@ button,
 
 .title--h4 {
   font-weight: 600;
-  font-size: 2.375rem;
+  font-size: 2.25rem;
+  line-height: 1.2;
 }
 
 .title--h5 {
@@ -783,7 +790,9 @@ button,
 }
 
 .button--no-bg {
-  background-color: rgba(165, 180, 252, 0.4);
+  color: #374151;
+  color: var(--text-color);
+  background-color: rgba(199, 210, 254, 0.3);
 }
 
 [data-accordion="element"].is-open > [data-accordion="content"] {
@@ -1633,6 +1642,163 @@ button,
 .protfolio-main__img-block {
   color: #374151;
   color: var(--color-gray-card);
+  width: 30.625rem;
+}
+
+.protfolio-main__img-block svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.protfolio-cards__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.protfolio-cards__controll:not(:last-child) {
+  margin-right: 0.75rem;
+}
+
+.card-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-top: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2.5rem 1.875rem;
+}
+
+.card-list__item {
+  border-radius: 12px;
+  -webkit-box-shadow: 0px 0px 14px 3px rgba(55, 65, 81, 0.1);
+  box-shadow: 0px 0px 14px 3px rgba(55, 65, 81, 0.1);
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.card-list__item--rooblee {
+  background-color: #E8F9F0;
+}
+
+.card-list__item--ostrovfortov {
+  background-color: #D8E7FC;
+}
+
+.card-list__item--trikotazh {
+  background-color: #FFF5F4;
+}
+
+.card-list__item--retailrocket {
+  background-color: #DEF1F8;
+}
+
+.card-list__item--online-tv {
+  background-color: #C5C5C5;
+}
+
+.card-list__item--escape-room {
+  background-color: #DDDDDD;
+}
+
+.card-list__item--israel {
+  background-color: #FFF5DD;
+}
+
+.card-list__item--cat-energy {
+  background-color: #E3F9D5;
+}
+
+.card-list__container-img {
+  margin: 3rem 2rem 0;
+  height: 300px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 12px 24px rgba(55, 65, 81, 0.3);
+  box-shadow: 0 12px 24px rgba(55, 65, 81, 0.3);
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.card-list__img-block {
+  overflow: hidden;
+}
+
+.card-list__img-block img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-list__container-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background-color: #ffffff;
+  background-color: var(--color-card-protfolio);
+  padding: 1.5rem;
+}
+
+.card-list__descr {
+  margin: 1rem 0 0 0;
+}
+
+.card-list__btn-block {
+  margin-top: 1.5rem;
+}
+
+.card-list__link {
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.card-list__link:not(:first-child) {
+  margin-top: 0.75rem;
+}
+
+.dark .card-list__item--rooblee,
+.dark .card-list__item--ostrovfortov,
+.dark .card-list__item--trikotazh,
+.dark .card-list__item--retailrocket,
+.dark .card-list__item--online-tv,
+.dark .card-list__item--escape-room,
+.dark .card-list__item--israel,
+.dark .card-list__item--cat-energy {
+  background-color: #374151;
+}
+
+.dark .card-list__container-text {
+  background-color: #1F2937;
 }
 
 .social {
@@ -1679,7 +1845,7 @@ button,
 }
 
 .footer {
-  margin-top: 5rem;
+  margin-top: 2.5rem;
   background-color: #EFF6FF;
   background-color: var(--bg-color-footer);
   border-top: 0.125rem solid #374151;
@@ -1921,7 +2087,7 @@ button,
 
 @media (max-width: 1279px) {
   .title--h1 {
-    font-size: 3.875rem;
+    font-size: 3.625rem;
   }
 
   .title--h2 {
@@ -1999,7 +2165,7 @@ button,
   }
 
   .title--h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .title--h3 {
@@ -2147,8 +2313,18 @@ button,
     margin-left: auto;
   }
 
-  .footer {
-    margin-top: 2.5rem;
+  .protfolio-main__container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .protfolio-main__img-block {
+    width: 25rem;
+  }
+
+  .card-list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2174,12 +2350,16 @@ button,
     font-size: 1.625rem;
   }
 
+  .title--h4 {
+    font-size: 1.75rem;
+  }
+
   .title--h5 {
     font-size: 1.5rem;
   }
 
   .title--h5 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .title--h6 {
@@ -2516,6 +2696,39 @@ button,
   .technologies__bg-img {
     margin-top: 1.5rem;
     width: 100%;
+  }
+
+  .protfolio-main__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .protfolio-main__img-block {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 28.125rem;
+  }
+
+  .card-list {
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    grid-gap: 2rem;
+  }
+
+  .card-list__container-img {
+    margin: 2rem 1.5rem 0;
+    height: 250px;
+    max-width: 340px;
+    width: calc(100% - 48px);
+  }
+
+  .card-list__container-text {
+    padding: 1rem;
   }
 
   .footer {

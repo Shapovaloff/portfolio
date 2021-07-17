@@ -1,13 +1,9 @@
 .footer {
-  margin-top: size(80px);
+  margin-top: size(40px);
   background-color: $color-primary-50;
   background-color: var(--bg-color-footer);
   border-top: size(2px) solid $color-dark-700;
   border-top: size(2px) solid var(--color-border-blue);
-
-  @include vp--1023 {
-    margin-top: size(40px);
-  }
 
   @include vp--767 {
     margin-top: 0;

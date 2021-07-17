@@ -43,6 +43,11 @@ $ostrovfortov:                    #D8E7FC;
 $trikotazh:                       #FFF5F4;
 $retailrocket:                    #DEF1F8;
 
+$online-tv:                       #C5C5C5;
+$escape-room:                     #DDDDDD;
+$israel:                          #FFF5DD;
+$cat-energy:                      #E3F9D5;
+
 // Social
 
 $tg:                              #0088CC;
@@ -69,6 +74,7 @@ $github:                          #24292E;
   --color-border-blue: #{$color-primary-100};
 
   --color-gray-card: #{$color-dark-700};
+  --color-card-protfolio: #{$color-white};
 
   --color-primary-500: #{$color-primary-500};
   --color-primary-200: #{$color-primary-200};
@@ -90,6 +96,7 @@ html.dark {
   --color-border-blue: #{$color-dark-700};
 
   --color-gray-card: #{$color-dark-500};
+  --color-card-protfolio: #{$color-dark-700};
 
   --color-primary-500: #{$color-dark-50};
   --color-primary-200: #{$color-dark-500};
@@ -113,7 +120,7 @@ $font-family--rouble:               "Rouble", "Arial", sans-serif;
 //---------------------------------
 $bs-btn:                            0px 0px 0px 3px rgba($color-primary-500, 0.25);
 $bs-card:                           0 12px 24px rgba($color-dark-700, 0.3);
-
+$bs-card-portfolio:                 0px 0px 14px 3px rgba($color-dark-700, 0.1);
 // Size Element
 //---------------------------------
 $border-radius:                     12px;

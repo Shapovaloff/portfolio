@@ -1,0 +1,13 @@
+.protfolio-cards {
+  &__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__controll {
+    &:not(:last-child) {
+      margin-right: size(12px);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+-
+  let buttonList = [
+    {text: "Все работы"},
+    {text: "Учебные"},
+    {text: "React"},
+  ]
+
+  let cardList = [
+    {title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "card-list__item--rooblee"},
+    {title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "card-list__item--ostrovfortov"},
+    {title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "card-list__item--trikotazh"},
+    {title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "card-list__item--retailrocket"},
+
+    {title: "Online TV", descr: 'Учебный проект марафона', linkSite: "https://shapovaloff.github.io/OnlineTV/src/index.html", nameSrc: "online-tv", class: "card-list__item--online-tv"},
+    {title: "Israel", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/israel/build/", nameSrc: "israel", class: "card-list__item--israel"},
+    {title: "Escape room", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/escape-room/build/main.html", nameSrc: "escape-room", class: "card-list__item--escape-room"},
+    {title: "Cat energy", descr: 'Учебный проект онлайн‑курсa HTML&nbsp;и&nbsp;CSS "Адаптивная вёрстка и&nbsp;автоматизация" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html", nameSrc: "cat-energy", class: "card-list__item--cat-energy"},
+  ]
+
+section.protfolio-cards
+  .protfolio-cards__container.container
+    h2.visually-hidden Список портфолио
+    .protfolio-cards__navigation
+      each buttonItem in buttonList
+        button(type="button").protfolio-cards__controll.button.button--opacity.button--no-bg=buttonItem.text
+    ul.card-list
+      each cardItem in cardList
+        li.card-list__item(class=cardItem.class)
+          .card-list__container-img
+            .card-list__img-block
+              picture
+                img(src="/img/card-list/"+ cardItem.nameSrc +"@1x.png", srcset="/img/card-list/"+ cardItem.nameSrc +"@2x.png 2x" alt=cardItem.title)
+          .card-list__container-text
+            .card-list__info
+              h3.card-list__title.title.title--h4=cardItem.title
+              p.card-list__descr!=cardItem.descr
+            .card-list__btn-block
+              if (cardItem.linkCase)
+                a(href=cardItem.linkCase, target="_blank", rel="nofollow").card-list__link.button.button--opacity.button--no-bg
+                  span Читать кейс
+                  +icon("icon-arrow-right", 24, 24)
+              a(href=cardItem.linkSite, target="_blank", rel="nofollow").card-list__link.button.button--primary
+                span Перейти на сайт
+                +icon("icon-arrow-right-top", 24, 24)
+
+

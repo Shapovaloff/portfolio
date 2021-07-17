@@ -8,10 +8,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include vp--1023 {
+      padding-top: size(32px);
+      padding-bottom: size(32px);
+    }
+
+    @include vp--767 {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__img-block {
     color: $color-dark-700;
     color: var(--color-gray-card);
+    width: size(490px);
+
+    & svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @include vp--1023 {
+      width: size(400px);
+    }
+
+    @include vp--767 {
+      margin-top: size(16px);
+      width: 100%;
+      max-width: size(450px);
+    }
   }
 }

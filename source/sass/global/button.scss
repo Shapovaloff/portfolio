@@ -72,6 +72,8 @@
   }
 
   &--no-bg {
-    background-color: rgba($color-primary-300, .4);
+    color: $color-dark-700;
+    color: var(--text-color);
+    background-color: rgba($color-primary-200, .3);
   }
 }

@@ -1,0 +1,111 @@
+.card-list {
+  @include reset-list;
+  margin-top: size(56px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: size(40px) size(30px);
+
+  @include vp--1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp--767 {
+    grid-template-columns: auto;
+    grid-gap: size(32px);
+  }
+
+  &__item {
+    border-radius: $border-radius;
+    box-shadow: $bs-card-portfolio;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--rooblee {background-color: $rooblee;}
+    &--ostrovfortov {background-color: $ostrovfortov;}
+    &--trikotazh {background-color: $trikotazh;}
+    &--retailrocket {background-color: $retailrocket;}
+    &--online-tv {background-color: $online-tv;}
+    &--escape-room {background-color: $escape-room;}
+    &--israel {background-color: $israel;}
+    &--cat-energy {background-color: $cat-energy;}
+  }
+
+  &__container-img {
+    margin: size(48px) size(32px) 0;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: $bs-card;
+    border-radius: size($border-radius) size($border-radius) 0 0;
+
+    @include vp--767 {
+      margin: size(32px) size(24px) 0;
+      height: 250px;
+      max-width: 340px;
+      width: calc(100% - 48px);
+    }
+  }
+
+  &__img-block {
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__container-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: $color-white;
+    background-color: var(--color-card-protfolio);
+    padding: size(24px);
+
+    @include vp--767 {
+      padding: size(16px);
+    }
+  }
+
+  &__descr {
+    margin: size(16px) 0 0 0;
+  }
+
+  &__btn-block {
+    margin-top: size(24px);
+
+
+  }
+
+  &__link {
+    width: 100%;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-top: size(12px);
+    }
+  }
+}
+
+.dark .card-list {
+  &__item {
+    &--rooblee,
+    &--ostrovfortov,
+    &--trikotazh,
+    &--retailrocket,
+    &--online-tv,
+    &--escape-room,
+    &--israel,
+    &--cat-energy {
+      background-color: $color-dark-700;
+    }
+  }
+
+  &__container-text {
+    background-color: $color-dark-800;
+  }
+}
