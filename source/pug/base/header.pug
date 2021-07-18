@@ -13,7 +13,7 @@ mixin header(headerMods, currentPage)
         a.header__logo
           +icon("icon-logo", 48, 48)
       else
-        a.header__logo(href="/", aria-label="Переход на главную")
+        a.header__logo(href="index.html", aria-label="Переход на главную")
           +icon("icon-logo", 48, 48)
       nav.main-nav(data-toggle-menu="navigation")
         ul.main-nav__list
