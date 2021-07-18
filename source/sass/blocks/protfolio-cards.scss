@@ -9,5 +9,16 @@
     &:not(:last-child) {
       margin-right: size(12px);
     }
+
+    &.active {
+      color: $color-dark-50;
+      background-color: $color-primary-500;
+
+      @media (min-width: 1024px) {
+        &:hover {
+          background-color: $color-primary-600;
+        }
+      }
+    }
   }
 }

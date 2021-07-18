@@ -9,6 +9,7 @@ import initAccordion from './modules/accordion';
 import scrollToElement from './modules/scroll-to-element';
 import smoothscroll from './vendor/smoothscroll.js';
 import initToggleMenu from './modules/toggle-menu';
+import protfolioFilter from './modules/protfolio-filter';
 
 // ---------------------------------
 
@@ -35,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
+    protfolioFilter();
     scrollToElement();
     smoothscroll.polyfill();
   });

@@ -439,16 +439,16 @@
         <section class="protfolio-cards">
           <div class="protfolio-cards__container container">
             <h2 class="visually-hidden">Список портфолио</h2>
-            <div class="protfolio-cards__navigation">
-              <button class="protfolio-cards__controll button button--opacity button--no-bg" type="button">Все работы</button>
-              <button class="protfolio-cards__controll button button--opacity button--no-bg" type="button">Учебные</button>
-              <button class="protfolio-cards__controll button button--opacity button--no-bg" type="button">React</button>
+            <div class="protfolio-cards__navigation" data-filter="navigation">
+              <button class="protfolio-cards__controll button button--opacity button--no-bg active" type="button" data-category-nav="all">Все работы</button>
+              <button class="protfolio-cards__controll button button--opacity button--no-bg" type="button" data-category-nav="educational">Учебные</button>
+              <button class="protfolio-cards__controll button button--opacity button--no-bg" type="button" data-category-nav="real">Реальные проекты</button>
             </div>
-            <ul class="card-list">
-              <li class="card-list__item card-list__item--rooblee">
+            <ul class="card-list" data-filter="container">
+              <li class="card-list__item filtr-item card-list__item--rooblee" data-category="real">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/rooblee@1x.png" srcset="/img/card-list/rooblee@2x.png 2x" alt="Rooblee"></picture>
+                    <picture><img src="img/card-list/rooblee@1x.png" srcset="img/card-list/rooblee@2x.png 2x" alt="Rooblee"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -466,10 +466,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--ostrovfortov">
+              <li class="card-list__item filtr-item card-list__item--ostrovfortov" data-category="real">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/ostrovfortov@1x.png" srcset="/img/card-list/ostrovfortov@2x.png 2x" alt="Острова фортов"></picture>
+                    <picture><img src="img/card-list/ostrovfortov@1x.png" srcset="img/card-list/ostrovfortov@2x.png 2x" alt="Острова фортов"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -487,10 +487,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--trikotazh">
+              <li class="card-list__item filtr-item card-list__item--trikotazh" data-category="real">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/trikotazh@1x.png" srcset="/img/card-list/trikotazh@2x.png 2x" alt="Ивановский трикотаж"></picture>
+                    <picture><img src="img/card-list/trikotazh@1x.png" srcset="img/card-list/trikotazh@2x.png 2x" alt="Ивановский трикотаж"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -508,10 +508,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--retailrocket">
+              <li class="card-list__item filtr-item card-list__item--retailrocket" data-category="real">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/retailrocket@1x.png" srcset="/img/card-list/retailrocket@2x.png 2x" alt="Retail Roceket"></picture>
+                    <picture><img src="img/card-list/retailrocket@1x.png" srcset="img/card-list/retailrocket@2x.png 2x" alt="Retail Roceket"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -529,10 +529,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--online-tv">
+              <li class="card-list__item filtr-item card-list__item--online-tv" data-category="educational">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/online-tv@1x.png" srcset="/img/card-list/online-tv@2x.png 2x" alt="Online TV"></picture>
+                    <picture><img src="img/card-list/online-tv@1x.png" srcset="img/card-list/online-tv@2x.png 2x" alt="Online TV"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -547,10 +547,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--israel">
+              <li class="card-list__item filtr-item card-list__item--israel" data-category="educational">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/israel@1x.png" srcset="/img/card-list/israel@2x.png 2x" alt="Israel"></picture>
+                    <picture><img src="img/card-list/israel@1x.png" srcset="img/card-list/israel@2x.png 2x" alt="Israel"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -565,10 +565,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--escape-room">
+              <li class="card-list__item filtr-item card-list__item--escape-room" data-category="educational">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/escape-room@1x.png" srcset="/img/card-list/escape-room@2x.png 2x" alt="Escape room"></picture>
+                    <picture><img src="img/card-list/escape-room@1x.png" srcset="img/card-list/escape-room@2x.png 2x" alt="Escape room"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">
@@ -583,10 +583,10 @@
                   </div>
                 </div>
               </li>
-              <li class="card-list__item card-list__item--cat-energy">
+              <li class="card-list__item filtr-item card-list__item--cat-energy" data-category="educational">
                 <div class="card-list__container-img">
                   <div class="card-list__img-block">
-                    <picture><img src="/img/card-list/cat-energy@1x.png" srcset="/img/card-list/cat-energy@2x.png 2x" alt="Cat energy"></picture>
+                    <picture><img src="img/card-list/cat-energy@1x.png" srcset="img/card-list/cat-energy@2x.png 2x" alt="Cat energy"></picture>
                   </div>
                 </div>
                 <div class="card-list__container-text">

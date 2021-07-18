@@ -22,6 +22,10 @@
     flex-direction: column;
     align-items: center;
 
+    &.hide {
+      display: none;
+    }
+
     &--rooblee {background-color: $rooblee;}
     &--ostrovfortov {background-color: $ostrovfortov;}
     &--trikotazh {background-color: $trikotazh;}
@@ -77,8 +81,6 @@
 
   &__btn-block {
     margin-top: size(24px);
-
-
   }
 
   &__link {
