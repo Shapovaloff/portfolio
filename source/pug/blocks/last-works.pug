@@ -1,33 +1,46 @@
 -
   let worksList = [
-    {title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "card-work--rooblee"},
-    {title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "card-work--ostrovfortov"},
-    {title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "card-work--trikotazh"},
-    {title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "card-work--retailrocket"},
+    {title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
+    {title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
+    {title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
+    {title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
   ]
 
 section.last-works#last-works
-  .last-works__contaner.container
+  .last-works__contaner.container(data-card-view="parent")
     h2.last-works__title.title.title--h2 Последние работы
-    ul.last-works__list
-      each worksItem in worksList
-        li.last-works__item.card-work(class=worksItem.class)
-          .card-work__container
-            .card-work__info
-              h3.card-work__title.title.title--h3=worksItem.title
-              p.card-work__descr!=worksItem.descr
-            .card-work__btn-block
-              a(href=worksItem.linkSite, target="_blank", rel="nofollow").card-work__link.button.button--primary
+    .last-works__nav
+      button(type="button", data-card-view="button", data-card-setting="compact").last-works__control.active.button
+        +icon("icon-layout-horizontal", 24, 24)
+      button(type="button", data-card-view="button", data-card-setting="tile").last-works__control.button
+        +icon("icon-layout-grid", 24, 24)
+
+    ul(data-card-view="list", data-load-more="list").cards-work
+      each worksItem, index in worksList
+        - var isHide = index > 2 ? 'hide' : ''
+
+        li.cards-work__item(class=worksItem.class, class=isHide, data-load-more="item")
+          .cards-work__container
+            .cards-work__info
+              h3.cards-work__title.title.title--h3=worksItem.title
+              p.cards-work__descr!=worksItem.descr
+            .cards-work__btn-block
+              a(href=worksItem.linkSite, target="_blank", rel="nofollow").cards-work__link.button.button--primary
                 span Перейти на сайт
                 +icon("icon-arrow-right-top", 24, 24)
-              a(href=worksItem.linkCase, target="_blank", rel="nofollow").card-work__link.button.button--opacity
+              a(href=worksItem.linkCase, target="_blank", rel="nofollow").cards-work__link.button.button--opacity
                 span Читать кейс
                 +icon("icon-arrow-right", 24, 24)
-          .card-work__img-block
-            picture
-              source(media="(max-width: 767px)", srcset="img/card-work/" + worksItem.nameSrc + "-mobile@1x.png 1x, img/card-work/" + worksItem.nameSrc + "-mobile@2x.png 2x")
-              img(src="img/card-work/" + worksItem.nameSrc + "@1x.png", srcset="img/card-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.nameSrc, width="700", height="400")
 
-    a(href="portfolio.html").last-works__link.button.button--opacity.button--no-bg
-      span Все работы
-      +icon("icon-arrow-right", 24, 24)
+          .cards-work__img-block.cards-work__img-block--compact
+            picture
+              source(media="(max-width: 767px)", srcset="img/cards-work/" + worksItem.nameSrc + "-mobile@1x.png 1x, img/cards-work/" + worksItem.nameSrc + "-mobile@2x.png 2x")
+              img(src="img/cards-work/" + worksItem.nameSrc + "@1x.png", srcset="img/cards-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.nameSrc, width="700", height="400")
+          .cards-work__img-block.cards-work__img-block--tile
+            .cards-work__container-img
+              picture
+                img(src="img/card-list/"+ worksItem.nameSrc +"@1x.png", srcset="img/card-list/"+ worksItem.nameSrc +"@2x.png 2x" alt=worksItem.title)
+
+    button(data-load-more="btn").last-works__link.button.button--opacity.button--no-bg
+      span Показать ещё
+      +icon("icon-update", 24, 24)

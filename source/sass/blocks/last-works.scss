@@ -5,20 +5,46 @@
     text-align: left;
   }
 
-  &__list {
-    @include reset-list;
-    margin-top: size(40px);
+  &__nav {
+    margin-top: size(32px);
+    display: flex;
+    justify-content: flex-end;
 
-    @include vp--1023 {
-      margin-top: size(32px);
+    @include vp--767 {
+      margin-top: size(16px);
     }
 
     @include vp--767 {
-      margin-top: size(24px);
+      margin-top: size(16px);
+    }
+  }
+
+  &__control {
+    padding: size(6px);
+    color: $color-dark-400;
+    color: var(--text-color-gray-light);
+
+    &:not(:first-child) {
+      margin-left: size(8px);
+    }
+
+    &.active {
+      opacity: 1;
+      color: $color-primary-500;
+      background-color: $color-dark-700;
+      background-color: var(--color-card);
+      border-radius: size(8px);
+    }
+
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $color-primary-500;
+      }
     }
   }
 
   &__link {
+    display: none;
     margin: size(60px) auto 0;
 
     @include vp--767 {
@@ -27,33 +53,53 @@
   }
 }
 
-.card-work {
-  text-align: left;
-  min-height: size(400px);
-  display: flex;
-  justify-content: space-between;
-  border-radius: $border-radius;
 
-  &:not(:first-child) {
-    margin-top: size(32px);
-  }
 
-  @include vp--1279 {
-    min-height: size(320px);
-  }
+
+.cards-work {
+  @include reset-list;
+  margin-top: size(32px);
 
   @include vp--1023 {
-    flex-direction: column;
+    margin-top: size(24px);
   }
 
   @include vp--767 {
-    padding: size(16px);
+    margin-top: size(16px);
   }
 
-  &--rooblee {background-color: $rooblee;}
-  &--ostrovfortov {background-color: $ostrovfortov;}
-  &--trikotazh {background-color: $trikotazh;}
-  &--retailrocket {background-color: $retailrocket;}
+  &__item {
+    text-align: left;
+    min-height: size(400px);
+    display: flex;
+    justify-content: space-between;
+    border-radius: $border-radius;
+
+    &.hide {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      margin-top: size(32px);
+    }
+
+    @include vp--1279 {
+      min-height: size(320px);
+    }
+
+    @include vp--1023 {
+      flex-direction: column;
+    }
+
+    @include vp--767 {
+      padding: size(16px);
+    }
+
+    &--rooblee {background-color: $rooblee;}
+    &--ostrovfortov {background-color: $ostrovfortov;}
+    &--trikotazh {background-color: $trikotazh;}
+    &--retailrocket {background-color: $retailrocket;}
+  }
 
   &__container {
     display: flex;
@@ -133,6 +179,10 @@
   &__img-block {
     max-width: size(700px);
 
+    &--tile {
+      display: none;
+    }
+
     @include vp--1279 {
       max-width: size(680px);
     }
@@ -154,7 +204,103 @@
   }
 }
 
-.dark .card-work {
+.tile.cards-work {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: size(40px) size(30px);
+}
+
+.tile .cards-work {
+  &__item {
+    margin-top: 0;
+    flex-direction: column;
+    box-shadow: $bs-card-portfolio;
+    overflow: hidden;
+  }
+
+  &__container {
+    order: 1;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  &__img-block {
+    margin: size(48px) size(32px) 0;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: $bs-card;
+    border-radius: size($border-radius) size($border-radius) 0 0;
+
+    &--compact {
+      display: none;
+    }
+
+    &--tile {
+      display: block;
+    }
+  }
+
+  &__container-img {
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding: size(24px);
+    flex-grow: 1;
+    background-color: $color-white;
+    background-color: var(--color-card-protfolio);
+  }
+
+  &__title {
+    font-size: size(36px);
+    line-height: 1.2;
+
+    @include vp--767 {
+      font-size: size(28px);
+    }
+  }
+
+  &__info {
+    margin-bottom: auto;
+  }
+
+  &__btn-block {
+    margin-top: size(24px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__link {
+    width: 100%;
+    justify-content: center;
+    order: 1;
+    margin-right: 0;
+
+    &:not(:first-child) {
+      order: 0;
+      margin-bottom: size(12px);
+
+      color: $color-dark-700;
+      color: var(--text-color);
+      background-color: rgba($color-primary-200, .3);
+
+      @media (min-width: 1024px) {
+        &:hover {
+          color: $color-dark-50;
+          background-color: $color-primary-500;
+        }
+      }
+    }
+  }
+}
+
+.dark .card-work__item {
   &--rooblee,
   &--ostrovfortov,
   &--trikotazh,

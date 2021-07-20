@@ -61,8 +61,7 @@
     line-height: 1.2;
 
     @include vp--767 {
-    font-size: size(28px);
-
+      font-size: size(28px);
     }
   }
 

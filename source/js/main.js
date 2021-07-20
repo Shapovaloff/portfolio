@@ -10,6 +10,8 @@ import scrollToElement from './modules/scroll-to-element';
 import smoothscroll from './vendor/smoothscroll.js';
 import initToggleMenu from './modules/toggle-menu';
 import protfolioFilter from './modules/protfolio-filter';
+import initCardView from './modules/card-view';
+import loadMore from './modules/load-more';
 
 // ---------------------------------
 
@@ -38,6 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     protfolioFilter();
     scrollToElement();
+    initCardView();
+    loadMore();
+
     smoothscroll.polyfill();
   });
 });

@@ -27,6 +27,8 @@ section.protfolio-cards
           button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg.active=buttonItem.text
         else
           button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg=buttonItem.text
+
+
     ul.card-list(data-filter="container")
       each cardItem in cardList
         li.card-list__item.filtr-item(class=cardItem.class, data-category=cardItem.category)
