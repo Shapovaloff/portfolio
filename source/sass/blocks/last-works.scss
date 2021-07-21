@@ -24,6 +24,10 @@
   &__card-view {
     display: flex;
     align-items: center;
+
+    @include vp--767 {
+      display: none;
+    }
   }
 
   &__control {
@@ -71,10 +75,6 @@
     margin-top: size(24px);
   }
 
-  @include vp--767 {
-    margin-top: size(16px);
-  }
-
   &__item {
     text-align: left;
     min-height: size(400px);
@@ -103,7 +103,10 @@
     }
 
     @include vp--767 {
-      padding: size(16px);
+      padding: 0;
+      box-shadow: $bs-card-portfolio;
+      overflow: hidden;
+      align-items: center;
     }
 
     &--rooblee {background-color: $rooblee;}
@@ -136,7 +139,12 @@
     @include vp--767 {
       flex-direction: column;
       padding: 0;
-      margin-top: size(40px);
+      border-radius: $border-radius $border-radius 0 0;
+      width: 100%;
+      padding: size(16px);
+      flex-grow: 1;
+      background-color: $color-white;
+      background-color: var(--color-card-protfolio);
     }
   }
 
@@ -147,7 +155,7 @@
     color: var(--text-color-gray-light);
 
     @include vp--767 {
-      margin-top: size(4px);
+      margin-top: size(24px);
     }
   }
 
@@ -166,7 +174,7 @@
 
     @include vp--767 {
       width: 100%;
-      margin-top: size(32px);
+      margin-top: size(24px);
     }
   }
 
@@ -191,6 +199,15 @@
     }
   }
 
+  &__container-img {
+    overflow: hidden;
+
+    & img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
   &__img-block {
     max-width: size(700px);
 
@@ -212,9 +229,13 @@
     }
 
     @include vp--767 {
-      border-radius: $border-radius;
       overflow: hidden;
       box-shadow: $bs-card;
+      border-radius: size($border-radius) size($border-radius) 0 0;
+      margin: size(32px) size(24px) 0;
+      height: 250px;
+      max-width: 340px;
+      width: calc(100% - 48px);
     }
   }
 }
@@ -223,6 +244,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: size(40px) size(30px);
+
+  @include vp--1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .tile .cards-work {
@@ -236,6 +261,15 @@
   &__container {
     order: 1;
     border-radius: $border-radius $border-radius 0 0;
+    width: 100%;
+    padding: size(24px);
+    flex-grow: 1;
+    background-color: $color-white;
+    background-color: var(--color-card-protfolio);
+
+    @include vp--1023 {
+      flex-direction: column;
+    }
   }
 
   &__img-block {
@@ -252,6 +286,10 @@
     &--tile {
       display: block;
     }
+
+    @include vp--1023 {
+      width: auto;
+    }
   }
 
   &__container-img {
@@ -261,14 +299,6 @@
       object-fit: cover;
       width: 100%;
     }
-  }
-
-  &__container {
-    width: 100%;
-    padding: size(24px);
-    flex-grow: 1;
-    background-color: $color-white;
-    background-color: var(--color-card-protfolio);
   }
 
   &__title {
@@ -297,6 +327,7 @@
     order: 1;
     margin-right: 0;
 
+
     &:not(:first-child) {
       order: 0;
       margin-bottom: size(12px);
@@ -310,6 +341,12 @@
           color: $color-dark-50;
           background-color: $color-primary-500;
         }
+      }
+    }
+
+    @include vp--1279 {
+      &:not(:last-child) {
+        margin-top: 0;
       }
     }
   }

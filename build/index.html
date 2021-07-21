@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description">
+    <meta property="vk:image" content="img/og-vk.png">
+    <meta property="og:image" content="img/og.png">
+    <meta property="og:type" content="website">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -512,17 +515,15 @@
             <h2 class="last-works__title title title--h2">Последние работы</h2>
             <div class="last-works__nav">
               <div class="protfolio-cards__navigation" data-filter="navigation">
-                <div class="custom-select custom-select--slide-up" data-select="" data-name="name-example-2" data-id="id-example-2"><span class="custom-select__label">label-2</span><span class="custom-select__error">some-error</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span>
-                    <svg width="24" height="24" aria-hidden="true">
-                      <use xlink:href="#icon-arrow-select"></use>
-                    </svg>
-                  </button>
+                <div class="custom-select custom-select--slide-up" data-select="" data-name="works" data-id="works"><span class="custom-select__label">works</span><span class="custom-select__error">works</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon">
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-select"></use>
+                      </svg></span></button>
                   <ul class="custom-select__list" role="listbox">
                     <li class="custom-select__item" tabindex="0" data-select-value="all" aria-selected="true" role="option">Все работы</li>
                     <li class="custom-select__item" tabindex="0" data-select-value="educational" aria-selected="false" role="option">Учебные</li>
                     <li class="custom-select__item" tabindex="0" data-select-value="real" aria-selected="false" role="option">Реальные проекты</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="react" aria-selected="false" role="option">React</li>
                   </ul>
                 </div>
               </div>
@@ -556,13 +557,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/ostrovfortov-mobile@1x.png 1x, img/cards-work/ostrovfortov-mobile@2x.png 2x"><img src="img/cards-work/ostrovfortov@1x.png" srcset="img/cards-work/ostrovfortov@2x.png 2x" alt="Острова фортов" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/ostrovfortov-small@1x.png 1x, img/cards-work/ostrovfortov-small@2x.png 2x"><img src="img/cards-work/ostrovfortov@1x.png" srcset="img/cards-work/ostrovfortov@2x.png 2x" alt="Острова фортов" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/ostrovfortov@1x.png" srcset="img/card-list/ostrovfortov@2x.png 2x" alt="Острова фортов"></picture>
+                    <picture><img src="img/card-list/ostrovfortov-small@1x.png" srcset="img/card-list/ostrovfortov-small@2x.png 2x" alt="Острова фортов"></picture>
                   </div>
                 </div>
               </li>
@@ -582,13 +585,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/rooblee-mobile@1x.png 1x, img/cards-work/rooblee-mobile@2x.png 2x"><img src="img/cards-work/rooblee@1x.png" srcset="img/cards-work/rooblee@2x.png 2x" alt="Rooblee" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/rooblee-small@1x.png 1x, img/cards-work/rooblee-small@2x.png 2x"><img src="img/cards-work/rooblee@1x.png" srcset="img/cards-work/rooblee@2x.png 2x" alt="Rooblee" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/rooblee@1x.png" srcset="img/card-list/rooblee@2x.png 2x" alt="Rooblee"></picture>
+                    <picture><img src="img/card-list/rooblee-small@1x.png" srcset="img/card-list/rooblee-small@2x.png 2x" alt="Rooblee"></picture>
                   </div>
                 </div>
               </li>
@@ -608,13 +613,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/retailrocket-mobile@1x.png 1x, img/cards-work/retailrocket-mobile@2x.png 2x"><img src="img/cards-work/retailrocket@1x.png" srcset="img/cards-work/retailrocket@2x.png 2x" alt="Retail Roceket" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/retailrocket-small@1x.png 1x, img/cards-work/retailrocket-small@2x.png 2x"><img src="img/cards-work/retailrocket@1x.png" srcset="img/cards-work/retailrocket@2x.png 2x" alt="Retail Roceket" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/retailrocket@1x.png" srcset="img/card-list/retailrocket@2x.png 2x" alt="Retail Roceket"></picture>
+                    <picture><img src="img/card-list/retailrocket-small@1x.png" srcset="img/card-list/retailrocket-small@2x.png 2x" alt="Retail Roceket"></picture>
                   </div>
                 </div>
               </li>
@@ -634,13 +641,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/trikotazh-mobile@1x.png 1x, img/cards-work/trikotazh-mobile@2x.png 2x"><img src="img/cards-work/trikotazh@1x.png" srcset="img/cards-work/trikotazh@2x.png 2x" alt="Ивановский трикотаж" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/trikotazh-small@1x.png 1x, img/cards-work/trikotazh-small@2x.png 2x"><img src="img/cards-work/trikotazh@1x.png" srcset="img/cards-work/trikotazh@2x.png 2x" alt="Ивановский трикотаж" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/trikotazh@1x.png" srcset="img/card-list/trikotazh@2x.png 2x" alt="Ивановский трикотаж"></picture>
+                    <picture><img src="img/card-list/trikotazh-small@1x.png" srcset="img/card-list/trikotazh-small@2x.png 2x" alt="Ивановский трикотаж"></picture>
                   </div>
                 </div>
               </li>
@@ -657,13 +666,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/israel-mobile@1x.png 1x, img/cards-work/israel-mobile@2x.png 2x"><img src="img/cards-work/israel@1x.png" srcset="img/cards-work/israel@2x.png 2x" alt="Israel" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/israel-small@1x.png 1x, img/cards-work/israel-small@2x.png 2x"><img src="img/cards-work/israel@1x.png" srcset="img/cards-work/israel@2x.png 2x" alt="Israel" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/israel@1x.png" srcset="img/card-list/israel@2x.png 2x" alt="Israel"></picture>
+                    <picture><img src="img/card-list/israel-small@1x.png" srcset="img/card-list/israel-small@2x.png 2x" alt="Israel"></picture>
                   </div>
                 </div>
               </li>
@@ -680,13 +691,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/escape-room-mobile@1x.png 1x, img/cards-work/escape-room-mobile@2x.png 2x"><img src="img/cards-work/escape-room@1x.png" srcset="img/cards-work/escape-room@2x.png 2x" alt="Escape room" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/escape-room-small@1x.png 1x, img/cards-work/escape-room-small@2x.png 2x"><img src="img/cards-work/escape-room@1x.png" srcset="img/cards-work/escape-room@2x.png 2x" alt="Escape room" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/escape-room@1x.png" srcset="img/card-list/escape-room@2x.png 2x" alt="Escape room"></picture>
+                    <picture><img src="img/card-list/escape-room-small@1x.png" srcset="img/card-list/escape-room-small@2x.png 2x" alt="Escape room"></picture>
                   </div>
                 </div>
               </li>
@@ -703,13 +716,15 @@
                   </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
-                  <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/cat-energy-mobile@1x.png 1x, img/cards-work/cat-energy-mobile@2x.png 2x"><img src="img/cards-work/cat-energy@1x.png" srcset="img/cards-work/cat-energy@2x.png 2x" alt="Cat energy" width="700" height="400">
-                  </picture>
+                  <div class="cards-work__container-img">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/cards-work/cat-energy-small@1x.png 1x, img/cards-work/cat-energy-small@2x.png 2x"><img src="img/cards-work/cat-energy@1x.png" srcset="img/cards-work/cat-energy@2x.png 2x" alt="Cat energy" width="700" height="400">
+                    </picture>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
-                    <picture><img src="img/card-list/cat-energy@1x.png" srcset="img/card-list/cat-energy@2x.png 2x" alt="Cat energy"></picture>
+                    <picture><img src="img/card-list/cat-energy-small@1x.png" srcset="img/card-list/cat-energy-small@2x.png 2x" alt="Cat energy"></picture>
                   </div>
                 </div>
               </li>

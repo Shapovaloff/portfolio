@@ -27,14 +27,7 @@ section.last-works#last-works
 
     .last-works__nav
       .protfolio-cards__navigation(data-filter="navigation")
-        +custom-select({class: "custom-select--slide-up", id: "id-example-2", label: "label-2", name: "name-example-2", error: "some-error", options: [{text: "Все работы", value: "all", isActive: true}, {text: "Учебные", value: "educational"}, {text: "Реальные проекты", value: "real"}, {text: "React", value: "react"}]})
-
-
-        //- each buttonItem, index in buttonList
-        //-   if (index === 0)
-        //-     button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg.active=buttonItem.text
-        //-   else
-        //-     button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg=buttonItem.text
+        +custom-select({class: "custom-select--slide-up", id: "works", label: "works", name: "works", error: "works", options: [{text: "Все работы", value: "all", isActive: true}, {text: "Учебные", value: "educational"}, {text: "Реальные проекты", value: "real"}]})
 
       .last-works__card-view
         button(type="button", data-card-view="button", data-card-setting="compact").last-works__control.active.button
@@ -61,14 +54,16 @@ section.last-works#last-works
                   span Читать кейс
                   +icon("icon-arrow-right", 24, 24)
 
+
           .cards-work__img-block.cards-work__img-block--compact
-            picture
-              source(media="(max-width: 767px)", srcset="img/cards-work/" + worksItem.nameSrc + "-mobile@1x.png 1x, img/cards-work/" + worksItem.nameSrc + "-mobile@2x.png 2x")
-              img(src="img/cards-work/" + worksItem.nameSrc + "@1x.png", srcset="img/cards-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.title, width="700", height="400")
+            .cards-work__container-img
+              picture
+                source(media="(max-width: 767px)", srcset="img/cards-work/" + worksItem.nameSrc + "-small@1x.png 1x, img/cards-work/" + worksItem.nameSrc + "-small@2x.png 2x")
+                img(src="img/cards-work/" + worksItem.nameSrc + "@1x.png", srcset="img/cards-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.title, width="700", height="400")
           .cards-work__img-block.cards-work__img-block--tile
             .cards-work__container-img
               picture
-                img(src="img/card-list/"+ worksItem.nameSrc +"@1x.png", srcset="img/card-list/"+ worksItem.nameSrc +"@2x.png 2x" alt=worksItem.title)
+                img(src="img/card-list/"+ worksItem.nameSrc +"-small@1x.png", srcset="img/card-list/"+ worksItem.nameSrc +"-small@2x.png 2x" alt=worksItem.title)
 
     button(data-load-more="btn").last-works__link.button.button--opacity.button--no-bg
       span Показать ещё

@@ -28,16 +28,24 @@ const settingButtonClickHandler = (evt, buttons, parent) => {
 
 const initCardViewAction = (cardParent) => {
   const buttons = cardParent.querySelectorAll('[data-card-view="button"]');
+  const cardList = cardParent.querySelector('[data-card-view="list"]');
 
   buttons.forEach((btn) => {
     btn.addEventListener('click', (evt) => {
       settingButtonClickHandler(evt, buttons, cardParent);
     });
   });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 767 && cardList.classList.contains('tile')) {
+      cardList.classList.remove('tile');
+    }
+  });
 };
 
 const initCardView = () => {
   const cardsView = document.querySelectorAll('[data-card-view="parent"]');
+
   if (cardsView) {
     cardsView.forEach((card) => initCardViewAction(card));
   }

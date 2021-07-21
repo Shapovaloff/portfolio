@@ -11,7 +11,8 @@ mixin custom-select(options = {})
     span.custom-select__error= options.error
     button.custom-select__button(type="button", aria-label=ariaLabel)
       span.custom-select__text
-      +icon("icon-arrow-select", 24, 24)
+      span.custom-select__icon
+        +icon("icon-arrow-select", 24, 24)
     ul.custom-select__list(role="listbox")
       each option in options.options
         - var ariaSelected = option.isActive ? "true" : "false"

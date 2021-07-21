@@ -191,6 +191,7 @@ const clickAction = (el, index) => {
   const buttonTextBlock = parent.querySelector('.custom-select__text');
   const itemText = el.innerText;
   const options = parent.querySelectorAll('option');
+  const select = parent.querySelector('select');
 
   if (multiple) {
     if (insert === 'true') {
@@ -237,6 +238,7 @@ const clickAction = (el, index) => {
       parent.classList.add('not-empty');
       parent.classList.add('is-valid');
       options[index + 1].selected = true;
+      window.setClass(options[index + 1].value);
       closeSelect();
     }
   }

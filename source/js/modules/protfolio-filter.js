@@ -43,12 +43,8 @@ const isloadBtn = () => {
 
 isloadBtn();
 
-const initFilter = (navBlock, filterItems) => {
-
-  let isCategoryActive = 'all';
-  const btnList = navBlock.querySelectorAll('[data-category-nav]');
-
-  const setClass = (btnCategory) => {
+const initFilter = (filterItems) => {
+  window.setClass = (btnCategory) => {
     filterItems.forEach((item) => {
       const categories = item.dataset.category.split(' ');
       const isCategory = categories.some((category) => category === btnCategory);
@@ -63,44 +59,15 @@ const initFilter = (navBlock, filterItems) => {
     loadBtn.removeEventListener('click', window.isBtnLoad);
     isloadBtn();
   };
-
-  const activeBtn = (button) => {
-    btnList.forEach((btn) => {
-      btn.classList.remove('active');
-
-      if (btn.dataset.categoryNav === button.dataset.categoryNav) {
-        btn.classList.add('active');
-      }
-    });
-  };
-
-  navBlock.addEventListener('click', (evt) => {
-    const button = evt.target.closest('[data-category-nav]');
-
-    if (!button) {
-      return;
-    }
-
-    if (button.dataset.categoryNav === isCategoryActive) {
-      return;
-    }
-
-    const categoryBtn = button.dataset.categoryNav;
-    isCategoryActive = categoryBtn;
-
-    setClass(categoryBtn, filterItems);
-    activeBtn(button);
-  });
 };
 
 const protfolioFilter = () => {
-  const navBlock = document.querySelector('[data-filter="navigation"]');
   const containerBlock = document.querySelector('[data-filter="container"]');
 
-  if (navBlock && containerBlock) {
+  if (containerBlock) {
     const filterItems = containerBlock.querySelectorAll('[data-category]');
 
-    initFilter(navBlock, filterItems);
+    initFilter(filterItems);
   }
 };
 
