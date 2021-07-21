@@ -86,6 +86,8 @@
 </symbol><symbol id="icon-arrow-right" viewBox="0 0 24 24">
 <path opacity="0.5" d="M5 11C4.44772 11 4 11.4477 4 12C4 12.5523 4.44772 13 5 13H12C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11H5Z" fill="currentColor"/>
 <path d="M11.2929 17.2929C10.9024 17.6834 10.9024 18.3166 11.2929 18.7071C11.6834 19.0976 12.3166 19.0976 12.7071 18.7071L18.7071 12.7071C19.0857 12.3285 19.0989 11.7189 18.7372 11.3243L13.2372 5.32428C12.864 4.91716 12.2314 4.88965 11.8243 5.26285C11.4172 5.63604 11.3897 6.26861 11.7628 6.67572L16.6159 11.9699L11.2929 17.2929Z" fill="currentColor"/>
+</symbol><symbol id="icon-arrow-select" viewBox="0 0 24 24">
+<path d="M17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3285 16.0857 11.7189 16.0989 11.3243 15.7372L5.32428 10.2372C4.91716 9.86396 4.88965 9.23139 5.26285 8.82427C5.63604 8.41716 6.26861 8.38965 6.67572 8.76285L11.9699 13.6159L17.2929 8.29289Z" fill="currentColor"/>
 </symbol><symbol id="icon-briefcase" viewBox="0 0 24 24">
 <path opacity="0.25" fill-rule="evenodd" clip-rule="evenodd" d="M8.50049 3.28571C7.85616 3.28571 7.33382 3.79739 7.33382 4.42857V7.85714C7.33382 8.48832 6.81148 9 6.16715 9C5.52283 9 5.00049 8.48832 5.00049 7.85714V4.42857C5.00049 2.53503 6.5675 1 8.50049 1H15.5005C17.4335 1 19.0005 2.53503 19.0005 4.42857V7.85714C19.0005 8.48832 18.4782 9 17.8338 9C17.1895 9 16.6672 8.48832 16.6672 7.85714V4.42857C16.6672 3.79739 16.1448 3.28571 15.5005 3.28571H8.50049Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 9.7968C1 7.97387 2.47778 6.49609 4.3007 6.49609H19.704C21.527 6.49609 23.0047 7.97387 23.0047 9.7968V19.6989C23.0047 21.5219 21.527 22.9996 19.704 22.9996H4.3007C2.47778 22.9996 1 21.5219 1 19.6989V9.7968ZM14.6118 12.9916C14.4244 12.7924 14.4339 12.4791 14.633 12.2917C14.8321 12.1043 15.1454 12.1138 15.3328 12.3129L17.3133 14.4171C17.4927 14.6077 17.4927 14.9051 17.3133 15.0957L15.3328 17.1999C15.1454 17.3991 14.8321 17.4086 14.633 17.2212C14.4339 17.0338 14.4244 16.7204 14.6118 16.5213L16.2728 14.7564L14.6118 12.9916ZM9.39157 12.9916L7.73051 14.7564L9.39157 16.5213C9.57897 16.7204 9.56948 17.0337 9.37036 17.2212C9.17124 17.4086 8.8579 17.3991 8.6705 17.1999L6.69007 15.0957C6.51065 14.9051 6.51065 14.6077 6.69007 14.4171L8.6705 12.3129C8.8579 12.1138 9.17124 12.1043 9.37036 12.2917C9.56948 12.4791 9.57897 12.7924 9.39157 12.9916ZM13.0275 10.8141C13.2916 10.8849 13.4484 11.1563 13.3776 11.4205L11.5836 18.1158C11.5128 18.3799 11.2413 18.5366 10.9772 18.4659C10.7131 18.3951 10.5563 18.1236 10.6271 17.8595L12.4211 11.1642C12.4919 10.9001 12.7634 10.7433 13.0275 10.8141Z" fill="currentColor"/>
@@ -509,19 +511,36 @@
           <div class="last-works__contaner container" data-card-view="parent">
             <h2 class="last-works__title title title--h2">Последние работы</h2>
             <div class="last-works__nav">
-              <button class="last-works__control active button" type="button" data-card-view="button" data-card-setting="compact">
-                <svg width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-layout-horizontal"></use>
-                </svg>
-              </button>
-              <button class="last-works__control button" type="button" data-card-view="button" data-card-setting="tile">
-                <svg width="24" height="24" aria-hidden="true">
-                  <use xlink:href="#icon-layout-grid"></use>
-                </svg>
-              </button>
+              <div class="protfolio-cards__navigation" data-filter="navigation">
+                <div class="custom-select custom-select--slide-up" data-select="" data-name="name-example-2" data-id="id-example-2"><span class="custom-select__label">label-2</span><span class="custom-select__error">some-error</span>
+                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span>
+                    <svg width="24" height="24" aria-hidden="true">
+                      <use xlink:href="#icon-arrow-select"></use>
+                    </svg>
+                  </button>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="all" aria-selected="true" role="option">Все работы</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="educational" aria-selected="false" role="option">Учебные</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="real" aria-selected="false" role="option">Реальные проекты</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="react" aria-selected="false" role="option">React</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="last-works__card-view">
+                <button class="last-works__control active button" type="button" data-card-view="button" data-card-setting="compact">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-layout-horizontal"></use>
+                  </svg>
+                </button>
+                <button class="last-works__control button" type="button" data-card-view="button" data-card-setting="tile">
+                  <svg width="24" height="24" aria-hidden="true">
+                    <use xlink:href="#icon-layout-grid"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <ul class="cards-work" data-card-view="list" data-load-more="list">
-              <li class="cards-work__item cards-work__item--ostrovfortov" data-load-more="item">
+            <ul class="cards-work" data-card-view="list" data-load-more="list" data-filter="container">
+              <li class="cards-work__item cards-work__item--ostrovfortov" data-category="real" data-load-more="item">
                 <div class="cards-work__container">
                   <div class="cards-work__info">
                     <h3 class="cards-work__title title title--h3">Острова фортов</h3>
@@ -533,11 +552,12 @@
                       </svg></a><a class="cards-work__link button button--opacity" href="https://asanov.agency/cases/ostrovfortov/" target="_blank" rel="nofollow"><span>Читать кейс</span>
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="#icon-arrow-right"></use>
-                      </svg></a></div>
+                      </svg></a>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/ostrovfortov-mobile@1x.png 1x, img/cards-work/ostrovfortov-mobile@2x.png 2x"><img src="img/cards-work/ostrovfortov@1x.png" srcset="img/cards-work/ostrovfortov@2x.png 2x" alt="ostrovfortov" width="700" height="400">
+                    <source media="(max-width: 767px)" srcset="img/cards-work/ostrovfortov-mobile@1x.png 1x, img/cards-work/ostrovfortov-mobile@2x.png 2x"><img src="img/cards-work/ostrovfortov@1x.png" srcset="img/cards-work/ostrovfortov@2x.png 2x" alt="Острова фортов" width="700" height="400">
                   </picture>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
@@ -546,7 +566,7 @@
                   </div>
                 </div>
               </li>
-              <li class="cards-work__item cards-work__item--rooblee" data-load-more="item">
+              <li class="cards-work__item cards-work__item--rooblee" data-category="real" data-load-more="item">
                 <div class="cards-work__container">
                   <div class="cards-work__info">
                     <h3 class="cards-work__title title title--h3">Rooblee</h3>
@@ -558,11 +578,12 @@
                       </svg></a><a class="cards-work__link button button--opacity" href="#!" target="_blank" rel="nofollow"><span>Читать кейс</span>
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="#icon-arrow-right"></use>
-                      </svg></a></div>
+                      </svg></a>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/rooblee-mobile@1x.png 1x, img/cards-work/rooblee-mobile@2x.png 2x"><img src="img/cards-work/rooblee@1x.png" srcset="img/cards-work/rooblee@2x.png 2x" alt="rooblee" width="700" height="400">
+                    <source media="(max-width: 767px)" srcset="img/cards-work/rooblee-mobile@1x.png 1x, img/cards-work/rooblee-mobile@2x.png 2x"><img src="img/cards-work/rooblee@1x.png" srcset="img/cards-work/rooblee@2x.png 2x" alt="Rooblee" width="700" height="400">
                   </picture>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
@@ -571,7 +592,7 @@
                   </div>
                 </div>
               </li>
-              <li class="cards-work__item cards-work__item--retailrocket" data-load-more="item">
+              <li class="cards-work__item cards-work__item--retailrocket" data-category="real" data-load-more="item">
                 <div class="cards-work__container">
                   <div class="cards-work__info">
                     <h3 class="cards-work__title title title--h3">Retail Roceket</h3>
@@ -583,11 +604,12 @@
                       </svg></a><a class="cards-work__link button button--opacity" href="https://asanov.agency/cases/retailrocket/" target="_blank" rel="nofollow"><span>Читать кейс</span>
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="#icon-arrow-right"></use>
-                      </svg></a></div>
+                      </svg></a>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/retailrocket-mobile@1x.png 1x, img/cards-work/retailrocket-mobile@2x.png 2x"><img src="img/cards-work/retailrocket@1x.png" srcset="img/cards-work/retailrocket@2x.png 2x" alt="retailrocket" width="700" height="400">
+                    <source media="(max-width: 767px)" srcset="img/cards-work/retailrocket-mobile@1x.png 1x, img/cards-work/retailrocket-mobile@2x.png 2x"><img src="img/cards-work/retailrocket@1x.png" srcset="img/cards-work/retailrocket@2x.png 2x" alt="Retail Roceket" width="700" height="400">
                   </picture>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
@@ -596,7 +618,7 @@
                   </div>
                 </div>
               </li>
-              <li class="cards-work__item cards-work__item--trikotazh hide" data-load-more="item">
+              <li class="cards-work__item cards-work__item--trikotazh hide" data-category="real" data-load-more="item">
                 <div class="cards-work__container">
                   <div class="cards-work__info">
                     <h3 class="cards-work__title title title--h3">Ивановский трикотаж</h3>
@@ -608,16 +630,86 @@
                       </svg></a><a class="cards-work__link button button--opacity" href="https://asanov.agency/cases/ivanovskij-trikotazh/" target="_blank" rel="nofollow"><span>Читать кейс</span>
                       <svg width="24" height="24" aria-hidden="true">
                         <use xlink:href="#icon-arrow-right"></use>
-                      </svg></a></div>
+                      </svg></a>
+                  </div>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--compact">
                   <picture>
-                    <source media="(max-width: 767px)" srcset="img/cards-work/trikotazh-mobile@1x.png 1x, img/cards-work/trikotazh-mobile@2x.png 2x"><img src="img/cards-work/trikotazh@1x.png" srcset="img/cards-work/trikotazh@2x.png 2x" alt="trikotazh" width="700" height="400">
+                    <source media="(max-width: 767px)" srcset="img/cards-work/trikotazh-mobile@1x.png 1x, img/cards-work/trikotazh-mobile@2x.png 2x"><img src="img/cards-work/trikotazh@1x.png" srcset="img/cards-work/trikotazh@2x.png 2x" alt="Ивановский трикотаж" width="700" height="400">
                   </picture>
                 </div>
                 <div class="cards-work__img-block cards-work__img-block--tile">
                   <div class="cards-work__container-img">
                     <picture><img src="img/card-list/trikotazh@1x.png" srcset="img/card-list/trikotazh@2x.png 2x" alt="Ивановский трикотаж"></picture>
+                  </div>
+                </div>
+              </li>
+              <li class="cards-work__item cards-work__item--israel hide" data-category="educational" data-load-more="item">
+                <div class="cards-work__container">
+                  <div class="cards-work__info">
+                    <h3 class="cards-work__title title title--h3">Israel</h3>
+                    <p class="cards-work__descr">Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy</p>
+                  </div>
+                  <div class="cards-work__btn-block"><a class="cards-work__link button button--primary" href="https://shapovaloff.github.io/israel/build/" target="_blank" rel="nofollow"><span>Перейти на сайт</span>
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-right-top"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--compact">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/cards-work/israel-mobile@1x.png 1x, img/cards-work/israel-mobile@2x.png 2x"><img src="img/cards-work/israel@1x.png" srcset="img/cards-work/israel@2x.png 2x" alt="Israel" width="700" height="400">
+                  </picture>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--tile">
+                  <div class="cards-work__container-img">
+                    <picture><img src="img/card-list/israel@1x.png" srcset="img/card-list/israel@2x.png 2x" alt="Israel"></picture>
+                  </div>
+                </div>
+              </li>
+              <li class="cards-work__item cards-work__item--escape-room hide" data-category="educational" data-load-more="item">
+                <div class="cards-work__container">
+                  <div class="cards-work__info">
+                    <h3 class="cards-work__title title title--h3">Escape room</h3>
+                    <p class="cards-work__descr">Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy</p>
+                  </div>
+                  <div class="cards-work__btn-block"><a class="cards-work__link button button--primary" href="https://shapovaloff.github.io/escape-room/build/main.html" target="_blank" rel="nofollow"><span>Перейти на сайт</span>
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-right-top"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--compact">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/cards-work/escape-room-mobile@1x.png 1x, img/cards-work/escape-room-mobile@2x.png 2x"><img src="img/cards-work/escape-room@1x.png" srcset="img/cards-work/escape-room@2x.png 2x" alt="Escape room" width="700" height="400">
+                  </picture>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--tile">
+                  <div class="cards-work__container-img">
+                    <picture><img src="img/card-list/escape-room@1x.png" srcset="img/card-list/escape-room@2x.png 2x" alt="Escape room"></picture>
+                  </div>
+                </div>
+              </li>
+              <li class="cards-work__item cards-work__item--cat-energy hide" data-category="educational" data-load-more="item">
+                <div class="cards-work__container">
+                  <div class="cards-work__info">
+                    <h3 class="cards-work__title title title--h3">Cat energy</h3>
+                    <p class="cards-work__descr">Учебный проект онлайн‑курсa HTML&nbsp;и&nbsp;CSS "Адаптивная вёрстка и&nbsp;автоматизация" от&nbsp;HTML Academy</p>
+                  </div>
+                  <div class="cards-work__btn-block"><a class="cards-work__link button button--primary" href="https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html" target="_blank" rel="nofollow"><span>Перейти на сайт</span>
+                      <svg width="24" height="24" aria-hidden="true">
+                        <use xlink:href="#icon-arrow-right-top"></use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--compact">
+                  <picture>
+                    <source media="(max-width: 767px)" srcset="img/cards-work/cat-energy-mobile@1x.png 1x, img/cards-work/cat-energy-mobile@2x.png 2x"><img src="img/cards-work/cat-energy@1x.png" srcset="img/cards-work/cat-energy@2x.png 2x" alt="Cat energy" width="700" height="400">
+                  </picture>
+                </div>
+                <div class="cards-work__img-block cards-work__img-block--tile">
+                  <div class="cards-work__container-img">
+                    <picture><img src="img/card-list/cat-energy@1x.png" srcset="img/card-list/cat-energy@2x.png 2x" alt="Cat energy"></picture>
                   </div>
                 </div>
               </li>

@@ -22,9 +22,7 @@ const loadMore = () => {
         showCardCount += CARD_COUNT_PER_STEP;
 
         if (showCardCount >= items.length) {
-          setTimeout(() => {
-            loadBtn.style.display = 'none';
-          }, 100);
+          loadBtn.style.display = 'none';
         }
       });
     }

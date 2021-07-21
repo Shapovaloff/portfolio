@@ -11,7 +11,7 @@ import smoothscroll from './vendor/smoothscroll.js';
 import initToggleMenu from './modules/toggle-menu';
 import protfolioFilter from './modules/protfolio-filter';
 import initCardView from './modules/card-view';
-import loadMore from './modules/load-more';
+import selectCustom from './modules/custom-select';
 
 // ---------------------------------
 
@@ -41,8 +41,7 @@ window.addEventListener('DOMContentLoaded', () => {
     protfolioFilter();
     scrollToElement();
     initCardView();
-    loadMore();
-
+    selectCustom.init();
     smoothscroll.polyfill();
   });
 });

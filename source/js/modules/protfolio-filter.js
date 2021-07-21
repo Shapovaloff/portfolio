@@ -1,4 +1,50 @@
-const initFilter = (navBlock, filterItems, containerBlock) => {
+const CARD_COUNT_PER_STEP = 3;
+const loadBtn = document.querySelector('[data-load-more="btn"]');
+const list = document.querySelector('[data-load-more="list"]');
+
+const isloadBtn = () => {
+  let showCardCount = CARD_COUNT_PER_STEP;
+  const items = list.querySelectorAll('[data-load-more="item"]:not(.hide-filter)');
+
+  window.isBtnLoad = (evt) => {
+    evt.preventDefault();
+
+    items.forEach((item, index) => {
+      if (index >= showCardCount && index < showCardCount + CARD_COUNT_PER_STEP) {
+        item.classList.remove('hide');
+      }
+    });
+
+    showCardCount += CARD_COUNT_PER_STEP;
+
+    if (showCardCount >= items.length) {
+      loadBtn.style.display = 'none';
+      loadBtn.removeEventListener('click', window.isBtnLoad);
+    }
+  };
+
+  if (loadBtn && items.length) {
+    loadBtn.style.display = 'none';
+
+    items.forEach((item, index) => {
+      item.classList.add('hide');
+
+      if (index < CARD_COUNT_PER_STEP) {
+        item.classList.remove('hide');
+      }
+    });
+
+    if (items.length > CARD_COUNT_PER_STEP) {
+      loadBtn.style.display = 'flex';
+      loadBtn.addEventListener('click', window.isBtnLoad);
+    }
+  }
+};
+
+isloadBtn();
+
+const initFilter = (navBlock, filterItems) => {
+
   let isCategoryActive = 'all';
   const btnList = navBlock.querySelectorAll('[data-category-nav]');
 
@@ -6,13 +52,16 @@ const initFilter = (navBlock, filterItems, containerBlock) => {
     filterItems.forEach((item) => {
       const categories = item.dataset.category.split(' ');
       const isCategory = categories.some((category) => category === btnCategory);
-      item.classList.remove('hide');
+      item.classList.remove('hide-filter');
 
 
       if (!isCategory && btnCategory !== 'all') {
-        item.classList.add('hide');
+        item.classList.add('hide-filter');
       }
     });
+
+    loadBtn.removeEventListener('click', window.isBtnLoad);
+    isloadBtn();
   };
 
   const activeBtn = (button) => {
@@ -29,10 +78,6 @@ const initFilter = (navBlock, filterItems, containerBlock) => {
     const button = evt.target.closest('[data-category-nav]');
 
     if (!button) {
-      return;
-    }
-
-    if (containerBlock.classList.contains('card-list--scale')) {
       return;
     }
 
@@ -55,7 +100,7 @@ const protfolioFilter = () => {
   if (navBlock && containerBlock) {
     const filterItems = containerBlock.querySelectorAll('[data-category]');
 
-    initFilter(navBlock, filterItems, containerBlock);
+    initFilter(navBlock, filterItems);
   }
 };
 

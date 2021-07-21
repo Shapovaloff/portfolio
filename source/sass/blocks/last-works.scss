@@ -8,7 +8,9 @@
   &__nav {
     margin-top: size(32px);
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
 
     @include vp--767 {
       margin-top: size(16px);
@@ -17,6 +19,11 @@
     @include vp--767 {
       margin-top: size(16px);
     }
+  }
+
+  &__card-view {
+    display: flex;
+    align-items: center;
   }
 
   &__control {
@@ -79,6 +86,10 @@
       display: none;
     }
 
+    &.hide-filter {
+      display: none;
+    }
+
     &:not(:first-child) {
       margin-top: size(32px);
     }
@@ -99,6 +110,10 @@
     &--ostrovfortov {background-color: $ostrovfortov;}
     &--trikotazh {background-color: $trikotazh;}
     &--retailrocket {background-color: $retailrocket;}
+    &--online-tv {background-color: $online-tv;}
+    &--escape-room {background-color: $escape-room;}
+    &--israel {background-color: $israel;}
+    &--cat-energy {background-color: $cat-energy;}
   }
 
   &__container {
@@ -300,11 +315,15 @@
   }
 }
 
-.dark .card-work__item {
+.dark .cards-work__item {
   &--rooblee,
   &--ostrovfortov,
   &--trikotazh,
-  &--retailrocket {
+  &--retailrocket,
+  &--online-tv,
+  &--escape-room,
+  &--israel,
+  &--cat-energy {
     background-color: $color-dark-800;
   }
 }

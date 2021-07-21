@@ -79,6 +79,7 @@ $github:                          #24292E;
   --color-primary-500: #{$color-primary-500};
   --color-primary-200: #{$color-primary-200};
 
+  --border-transparent: #{transparent};
 }
 
 html.dark {
@@ -100,6 +101,8 @@ html.dark {
 
   --color-primary-500: #{$color-dark-50};
   --color-primary-200: #{$color-dark-500};
+
+  --border-transparent: #{$color-dark-500};
 }
 
 

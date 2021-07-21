@@ -1,25 +1,52 @@
 -
-  let worksList = [
-    {title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
-    {title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
-    {title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
-    {title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
+  let buttonList = [
+    {text: "Все работы", filter: "all"},
+    {text: "Учебные", filter: "educational"},
+    {text: "Реальные проекты", filter: "real"},
+    //- {text: "React", filter: "react"},
   ]
+
+  let worksList = [
+    {category: "real", title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
+    {category: "real", title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
+    {category: "real", title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
+    {category: "real", title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
+
+    {category: "educational", title: "Israel", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/israel/build/", nameSrc: "israel", class: "cards-work__item--israel"},
+    {category: "educational", title: "Escape room", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/escape-room/build/main.html", nameSrc: "escape-room", class: "cards-work__item--escape-room"},
+    {category: "educational", title: "Cat energy", descr: 'Учебный проект онлайн‑курсa HTML&nbsp;и&nbsp;CSS "Адаптивная вёрстка и&nbsp;автоматизация" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/1374325-cat-energy-19/build/index.html", nameSrc: "cat-energy", class: "cards-work__item--cat-energy"},
+
+    //- {category: "educational", title: "Online TV", descr: 'Учебный проект марафона', linkSite: "https://shapovaloff.github.io/OnlineTV/src/index.html", nameSrc: "online-tv", class: "cards-work__item--online-tv"},
+  ]
+
+
 
 section.last-works#last-works
   .last-works__contaner.container(data-card-view="parent")
     h2.last-works__title.title.title--h2 Последние работы
-    .last-works__nav
-      button(type="button", data-card-view="button", data-card-setting="compact").last-works__control.active.button
-        +icon("icon-layout-horizontal", 24, 24)
-      button(type="button", data-card-view="button", data-card-setting="tile").last-works__control.button
-        +icon("icon-layout-grid", 24, 24)
 
-    ul(data-card-view="list", data-load-more="list").cards-work
+    .last-works__nav
+      .protfolio-cards__navigation(data-filter="navigation")
+        +custom-select({class: "custom-select--slide-up", id: "id-example-2", label: "label-2", name: "name-example-2", error: "some-error", options: [{text: "Все работы", value: "all", isActive: true}, {text: "Учебные", value: "educational"}, {text: "Реальные проекты", value: "real"}, {text: "React", value: "react"}]})
+
+
+        //- each buttonItem, index in buttonList
+        //-   if (index === 0)
+        //-     button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg.active=buttonItem.text
+        //-   else
+        //-     button(type="button", data-category-nav=buttonItem.filter).protfolio-cards__controll.button.button--opacity.button--no-bg=buttonItem.text
+
+      .last-works__card-view
+        button(type="button", data-card-view="button", data-card-setting="compact").last-works__control.active.button
+          +icon("icon-layout-horizontal", 24, 24)
+        button(type="button", data-card-view="button", data-card-setting="tile").last-works__control.button
+          +icon("icon-layout-grid", 24, 24)
+
+    ul(data-card-view="list", data-load-more="list", data-filter="container").cards-work
       each worksItem, index in worksList
         - var isHide = index > 2 ? 'hide' : ''
 
-        li.cards-work__item(class=worksItem.class, class=isHide, data-load-more="item")
+        li.cards-work__item(class=worksItem.class, class=isHide, data-category=worksItem.category, data-load-more="item")
           .cards-work__container
             .cards-work__info
               h3.cards-work__title.title.title--h3=worksItem.title
@@ -28,14 +55,16 @@ section.last-works#last-works
               a(href=worksItem.linkSite, target="_blank", rel="nofollow").cards-work__link.button.button--primary
                 span Перейти на сайт
                 +icon("icon-arrow-right-top", 24, 24)
-              a(href=worksItem.linkCase, target="_blank", rel="nofollow").cards-work__link.button.button--opacity
-                span Читать кейс
-                +icon("icon-arrow-right", 24, 24)
+
+              if (worksItem.linkCase)
+                a(href=worksItem.linkCase, target="_blank", rel="nofollow").cards-work__link.button.button--opacity
+                  span Читать кейс
+                  +icon("icon-arrow-right", 24, 24)
 
           .cards-work__img-block.cards-work__img-block--compact
             picture
               source(media="(max-width: 767px)", srcset="img/cards-work/" + worksItem.nameSrc + "-mobile@1x.png 1x, img/cards-work/" + worksItem.nameSrc + "-mobile@2x.png 2x")
-              img(src="img/cards-work/" + worksItem.nameSrc + "@1x.png", srcset="img/cards-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.nameSrc, width="700", height="400")
+              img(src="img/cards-work/" + worksItem.nameSrc + "@1x.png", srcset="img/cards-work/" + worksItem.nameSrc + "@2x.png 2x", alt=worksItem.title, width="700", height="400")
           .cards-work__img-block.cards-work__img-block--tile
             .cards-work__container-img
               picture
