@@ -3,19 +3,19 @@
     {
       heading: "Asanov Agency",
       timeText: "сентябрь 2020 - настоящее время",
-      descr: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit voluptatum, rem libero modi labore porro commodi inventore architecto explicabo reiciendis, perspiciatis voluptatibus odio, sequi nobis? Optio, aperiam, tenetur!",
+      descr: "После успешного прохождения курса, получения сертификата и&nbsp;самостоятельного изучения основ JS я через месяц трудоустроился в&nbsp;студию Сергея Асанова, где работаю по&nbsp;настоящее время уже более 1&nbsp;года.",
       icon: "icon-briefcase",
     },
     {
-      heading: "Обучение в HTML Academy",
+      heading: "HTML Academy (обучение)",
       timeText: "июнь 2020 - август 2020",
-      descr: "Проходил онлайн‑курс HTML и CSS. Адаптивная вёрстка и автоматизация",
+      descr: 'Проходил онлайн‑курс HTML и&nbsp;CSS. Адаптивная вёрстка и&nbsp;автоматизация. Это второй уровень обучения вёрстки от&nbsp;академии. После прохождения курса получил сертификат, а&nbsp;также выполнил проекты в&nbsp;Акселераторе (&laquo;Акселератор&raquo;&nbsp;&mdash; это практика для верстальщиков и&nbsp;фронтенд-разработчиков с&nbsp;командой, горящими сроками и&nbsp;код-ревью от&nbsp;HTML&nbsp;Academy) которые вы&nbsp;можете посмотреть в&nbsp;секции &laquo;Проекты&raquo; выбрав фильтр &laquo;Учебные&raquo;',
       icon: "icon-library",
     },
     {
-      heading: "Обучение в HTML Academy",
+      heading: "HTML Academy (обучение)",
       timeText: "март 2020 - май 2020",
-      descr: "Проходил онлайн‑курс HTML и CSS. Профессиональная вёрстка сайтов",
+      descr: "Проходил онлайн‑курс HTML и&nbsp;CSS, Профессиональная вёрстка сайтов. Успешно окончил курс и&nbsp;перешёл на&nbsp;второй уровень обучения.",
       icon: "icon-library",
     },
   ]
@@ -38,7 +38,7 @@ section.career#career
                 p=careerItem.timeText
               .career__content(data-accordion="content")
                 .career__content-wrapper
-                  p=careerItem.descr
+                  p!=careerItem.descr
           else
             li.career__item(data-accordion="element")
               button(type="button" data-accordion="button").career__heading-btn
@@ -48,4 +48,4 @@ section.career#career
                 p=careerItem.timeText
               .career__content(data-accordion="content")
                 .career__content-wrapper
-                  p=careerItem.descr
+                  p!=careerItem.descr

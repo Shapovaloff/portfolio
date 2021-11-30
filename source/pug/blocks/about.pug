@@ -15,8 +15,8 @@ section.about#about
         ul
           each aboutItem in aboutList
             li=aboutItem
-        a(href="#!").about__link.button.button--opacity
-          span Скачать резюме
-          +icon("icon-download", 24, 24)
+        a(href="https://career.habr.com/yuryshapovalov", target="_blank" rel="noopener noreferrer").about__link.button.button--opacity
+          span Посмотреть резюме
+          +icon("icon-arrow-right-top", 24, 24)
       .about__illustration
         +icon("icon-about-bg", width="255", height="165")

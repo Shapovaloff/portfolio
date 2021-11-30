@@ -7,10 +7,10 @@
   ]
 
   let worksList = [
-    {category: "real", title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
-    {category: "real", title: "Rooblee", descr: "Сервис по подбору кредитов", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
-    {category: "real", title: "Retail Rocket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
-    {category: "real", title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
+    {category: "real", title: "Остров фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com",  nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
+    {category: "real", title: "Rooblee", descr: "Сервис по подбору кредитов", nameSrc: "rooblee", linkSite: "https://rooblee.ru/", class: "cards-work__item--rooblee"},
+    {category: "real", title: "Retail Rocket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/",  nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
+    //- {category: "real", title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
 
     {category: "educational", title: "Israel", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/israel/build/", nameSrc: "israel", class: "cards-work__item--israel"},
     {category: "educational", title: "Escape room", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/escape-room/build/main.html", nameSrc: "escape-room", class: "cards-work__item--escape-room"},
@@ -46,16 +46,16 @@ section.last-works#last-works
               p.cards-work__descr!=worksItem.descr
             .cards-work__btn-block
               if (worksItem.linkSite)
-                a(href=worksItem.linkSite, target="_blank", rel="nofollow").cards-work__link.button.button--primary
+                a(href=worksItem.linkSite, target="_blank" rel="noopener noreferrer").cards-work__link.button.button--primary
                   span Перейти на сайт
                   +icon("icon-arrow-right-top", 24, 24)
               else
-                a(target="_blank", rel="nofollow").cards-work__link.disabled.button.button--primary
+                a(target="_blank" rel="noopener noreferrer").cards-work__link.disabled.button.button--primary
                   span Проект в разработке
                   //- +icon("icon-arrow-right-top", 24, 24)
 
               if (worksItem.linkCase)
-                a(href=worksItem.linkCase, target="_blank", rel="nofollow").cards-work__link.button.button--opacity
+                a(href=worksItem.linkCase, target="_blank" rel="noopener noreferrer").cards-work__link.button.button--opacity
                   span Читать кейс
                   +icon("icon-arrow-right", 24, 24)
 
