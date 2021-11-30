@@ -1,6 +1,6 @@
 -
   let buttonList = [
-    {text: "Все работы", filter: "all"},
+    {text: "Все проекты", filter: "all"},
     {text: "Учебные", filter: "educational"},
     {text: "Реальные проекты", filter: "real"},
     //- {text: "React", filter: "react"},
@@ -8,8 +8,8 @@
 
   let worksList = [
     {category: "real", title: "Острова фортов", descr: "Билеты на метеоры в&nbsp;Кронштадт до Острова Фортов", linkSite: "https://ostrovfortov.com", linkCase: "https://asanov.agency/cases/ostrovfortov/", nameSrc: "ostrovfortov", class: "cards-work__item--ostrovfortov"},
-    {category: "real", title: "Rooblee", descr: "Сервис по подбору кредитов", linkSite: "#!", linkCase: "#!", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
-    {category: "real", title: "Retail Roceket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
+    {category: "real", title: "Rooblee", descr: "Сервис по подбору кредитов", nameSrc: "rooblee", class: "cards-work__item--rooblee"},
+    {category: "real", title: "Retail Rocket", descr: "Помогает трансформировать новых покупателей в&nbsp;постоянных и&nbsp;работать над&nbsp;их&nbsp;удержанием", linkSite: "https://retailrocket.ru/", linkCase: "https://asanov.agency/cases/retailrocket/", nameSrc: "retailrocket", class: "cards-work__item--retailrocket"},
     {category: "real", title: "Ивановский трикотаж", descr: "Интернет магазин одежды", linkSite: "https://ivanovskij-trikotazh.ru/", linkCase: "https://asanov.agency/cases/ivanovskij-trikotazh/", nameSrc: "trikotazh", class: "cards-work__item--trikotazh"},
 
     {category: "educational", title: "Israel", descr: 'Учебный проект практического курса "Акселератор" от&nbsp;HTML Academy', linkSite: "https://shapovaloff.github.io/israel/build/", nameSrc: "israel", class: "cards-work__item--israel"},
@@ -23,7 +23,7 @@
 
 section.last-works#last-works
   .last-works__contaner.container(data-card-view="parent")
-    h2.last-works__title.title.title--h2 Последние работы
+    h2.last-works__title.title.title--h2 Проекты
 
     .last-works__nav
       .protfolio-cards__navigation(data-filter="navigation")
@@ -45,9 +45,14 @@ section.last-works#last-works
               h3.cards-work__title.title.title--h3=worksItem.title
               p.cards-work__descr!=worksItem.descr
             .cards-work__btn-block
-              a(href=worksItem.linkSite, target="_blank", rel="nofollow").cards-work__link.button.button--primary
-                span Перейти на сайт
-                +icon("icon-arrow-right-top", 24, 24)
+              if (worksItem.linkSite)
+                a(href=worksItem.linkSite, target="_blank", rel="nofollow").cards-work__link.button.button--primary
+                  span Перейти на сайт
+                  +icon("icon-arrow-right-top", 24, 24)
+              else
+                a(target="_blank", rel="nofollow").cards-work__link.disabled.button.button--primary
+                  span Проект в разработке
+                  //- +icon("icon-arrow-right-top", 24, 24)
 
               if (worksItem.linkCase)
                 a(href=worksItem.linkCase, target="_blank", rel="nofollow").cards-work__link.button.button--opacity
@@ -63,7 +68,7 @@ section.last-works#last-works
           .cards-work__img-block.cards-work__img-block--tile
             .cards-work__container-img
               picture
-                img(src="img/card-list/"+ worksItem.nameSrc +"-small@1x.png", srcset="img/card-list/"+ worksItem.nameSrc +"-small@2x.png 2x" alt=worksItem.title)
+                img(src="img/cards-work/"+ worksItem.nameSrc +"-small@1x.png", srcset="img/cards-work/"+ worksItem.nameSrc +"-small@2x.png 2x" alt=worksItem.title)
 
     button(data-load-more="btn").last-works__link.button.button--opacity.button--no-bg
       span Показать ещё

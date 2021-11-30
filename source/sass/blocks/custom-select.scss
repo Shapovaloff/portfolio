@@ -64,7 +64,7 @@
     width: auto;
     max-height: 300px;
     overflow-y: auto;
-    border-radius: 4px;
+    border-radius: 8px;
     overflow: hidden;
     border: 1px solid transparent;
     border: 1px solid var(--border-transparent);
@@ -150,7 +150,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: -5px 0px 5px rgba(255, 255, 255, 1);
 
     & svg {
       transition: transform .2s;
