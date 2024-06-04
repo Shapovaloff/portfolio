@@ -1,7 +1,8 @@
 .DS_Store
 .idea
 .vscode
-package-lock.json
+.nvmrc
+build
 *.ai
 *.log
 *.psd
