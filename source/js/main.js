@@ -4,14 +4,14 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 
 import {initModals} from './modules/modals/init-modals';
-import themeChange from './modules/theme-change';
 import initAccordion from './modules/accordion';
 import scrollToElement from './modules/scroll-to-element';
 import smoothscroll from './vendor/smoothscroll.js';
 import initToggleMenu from './modules/toggle-menu';
-import protfolioFilter from './modules/protfolio-filter';
+import portfolioFilter from './modules/portfolio-filter';
 import initCardView from './modules/card-view';
 import selectCustom from './modules/custom-select';
+import experienceCount from './modules/experience-count.js';
 
 // ---------------------------------
 
@@ -26,15 +26,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // polyfillObjectFit();
 
   iosVhFix();
-  themeChange();
+  experienceCount();
   initAccordion();
   initToggleMenu();
   selectCustom.init();
   initModals();
-  protfolioFilter();
+  portfolioFilter();
   scrollToElement();
   initCardView();
   smoothscroll.polyfill();
+
 
 
   // Modules

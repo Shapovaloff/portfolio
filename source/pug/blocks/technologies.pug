@@ -1,51 +1,47 @@
 -
   let techBlocks = [
     {
-      title: "Основные",
-      nameBlock: "main",
+      title: 'Основные',
+      nameBlock: 'main',
       techList: [
-        {nameSvg:"icon-html", text: "Html"},
-        {nameSvg:"icon-css", text: "Css"},
-        {nameSrc: "js", text: "JavaScript"},
-        {nameSrc: "react", text: "React"},
+        {nameSvg:'icon-html', text: 'Html'},
+        {nameSvg:'icon-css', text: 'Css'},
+        {nameSrc: 'js', text: 'JavaScript'},
+        {nameSrc: 'react', text: 'React'},
       ],
     },
     {
-      title: "Тестирование",
-      nameBlock: "testing",
+      title: 'Тестирование',
+      nameBlock: 'testing',
       techList: [
-        {nameSrc: "pagespeed", text: "PageSpeed"},
-        {nameSrc: "lighthouse", text: "Lighthouse"},
-        {nameSvg: "icon-w3c", text: "W3C"},
+        {nameSrc: 'pagespeed', text: 'PageSpeed'},
+        {nameSrc: 'lighthouse', text: 'Lighthouse'},
+        {nameSvg: 'icon-w3c', text: 'W3C'},
       ],
     },
     {
-      title: "Верстаю макеты из",
-      nameBlock: "graphics-editor",
+      title: 'Верстаю макеты из',
+      nameBlock: 'graphics-editor',
       techList: [
-        {nameSrc: "figma", text: "Figma"},
-        {nameSrc: "sketch", text: "Sketch"},
-        {nameSrc: "ps", text: "Photoshop"},
-        {nameSrc: "zeplin", text: "Zeplin"},
+        {nameSrc: 'figma', text: 'Figma'},
       ],
     },
     {
-      title: "Также умею",
-      nameBlock: "preprocessors",
+      title: 'Также умею',
+      nameBlock: 'preprocessors',
       techList: [
-        {nameSrc: "pug", text: "Pug"},
-        {nameSrc: "scss", text: "Scss"},
-        {nameSrc: "less", text: "Less"},
+        {nameSrc: 'pug', text: 'Pug'},
+        {nameSrc: 'scss', text: 'Scss'},
       ],
     },
     {
-      title: "Сборщики и таск-менеджеры",
-      nameBlock: "collector",
+      title: 'Сборщики и таск-менеджеры',
+      nameBlock: 'collector',
       techList: [
-        {nameSrc: "webpack", text: "Webpack"},
-        {nameSrc: "gulp", text: "Gulp"},
-        {nameSrc: "yarn", text: "Yarn"},
-        {nameSrc: "active-collab", text: "ActiveCollab"},
+        {nameSrc: 'webpack', text: 'Webpack'},
+        {nameSrc: 'gulp', text: 'Gulp'},
+        {nameSrc: 'yarn', text: 'Yarn'},
+        {nameSrc: 'active-collab', text: 'ActiveCollab'},
       ],
     },
   ]
@@ -62,13 +58,10 @@ section.technologies#technologies
               li.technologies__item
                 .technologies__img-block
                   if (techItem.nameSrc)
-                    img(src="img/technologies/"+ techBlock.nameBlock +"/"+ techItem.nameSrc +".svg", alt=techItem.text)
+                    img(src='img/technologies/'+ techBlock.nameBlock +'/'+ techItem.nameSrc +'.svg', alt=techItem.text)
                   else if (techItem.nameSvg)
                     +icon(techItem.nameSvg, 56, 56)
 
                 p.technologies__text=techItem.text
     .technologies__bg-img
-      +icon("icon-technologies-bg", width="470", height="320")
-
-
-
+      +icon('icon-technologies-bg', width='470', height='320')

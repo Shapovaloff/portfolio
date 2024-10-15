@@ -102,11 +102,7 @@
   }
 }
 
-
-
-
-
-.dark .promo__animate {
+[data-theme="dark"] .promo__animate {
   &--circle,
   &--path {
     animation-fill-mode: forwards;

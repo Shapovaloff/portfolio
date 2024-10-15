@@ -1,11 +1,10 @@
-section.promo
-  .promo__container.container
-    p.promo__text.title.title--h3 Привет, я #[span Юрий]
-    h1.promo__title.title.title--h1 Frontend Developer
-    .promo__img-block
-      +icon("icon-promo-hello", 770, 390)
-    a(href="#last-works").promo__button.button.button--primary
-      span Проекты
-      +icon("icon-arrow-down", 24, 24)
-
-
+mixin promo()
+  section.promo
+    .promo__container.container
+      p.promo__text.title.title--h3 Привет, я #[span Юрий]
+      h1.promo__title.title.title--h1 Frontend Developer
+      .promo__img-block
+        +icon("icon-promo-hello", 770, 390)
+      a(href="#last-works").promo__button.button.button--primary
+        span Проекты
+        +icon("icon-arrow-down", 24, 24)

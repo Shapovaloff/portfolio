@@ -1,18 +1,18 @@
 extends ../base/layout
 
 block variables
-  - const title = "Yury Shapovalov - Frontend developer"
-  - const description = "Frontend developer"
-  - const wrapperMods = ""
+  - const title = 'Yury Shapovalov - Frontend developer'
+  - const description = 'Frontend developer'
+  - const wrapperMods = ''
   - const hasHeader = true
-  - const headerMods = ""
+  - const headerMods = ''
   - const hasFooter = true
-  - const footerMods = ""
-  - const currentPage = "index"
+  - const footerMods = ''
+  - const currentPage = 'index'
 
 block main
   main
-    include ../blocks/promo
+    +promo()
     include ../blocks/advantages
     include ../blocks/about
     include ../blocks/last-works

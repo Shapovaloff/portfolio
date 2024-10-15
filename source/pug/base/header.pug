@@ -24,14 +24,11 @@ mixin header(headerMods, currentPage)
                   +icon(link.svgName, 24, 24)
                 span=link.text
 
-      .header__toggle.theme-switcher
-        input(type="checkbox", aria-label="смена темы", name="color-theme", id="color-theme", class="visually-hidden")
-        label(for="color-theme").theme-switcher__toggle
+      button.header__toggle.theme-switcher(data-change-theme="btn")
+        .theme-switcher__toggle
           +icon('icon-sun', 24, 24)
           +icon('icon-moon', 24, 24)
 
       button(type="button", data-toggle-menu="button").header__btn-menu
         span
         span
-
-

@@ -48,6 +48,10 @@
     &--escape-room {background-color: $escape-room;}
     &--israel {background-color: $israel;}
     &--cat-energy {background-color: $cat-energy;}
+    &--symbl {background-color: $symbl;}
+    &--osome2some {background-color: $osome2some;}
+    &--trikotazh {background-color: $trikotazh;}
+    &--next-pizza {background-color: $next-pizza;}
   }
 
   &__container {
@@ -75,7 +79,7 @@
       padding: size(16px);
       flex-grow: 1;
       background-color: $color-white;
-      background-color: var(--color-card-protfolio);
+      background-color: var(--color-card-portfolio);
     }
   }
 
@@ -208,7 +212,7 @@
     padding: size(24px);
     flex-grow: 1;
     background-color: $color-white;
-    background-color: var(--color-card-protfolio);
+    background-color: var(--color-card-portfolio);
 
     @include vp--1023 {
       flex-direction: column;
@@ -285,8 +289,6 @@
           color: $color-dark-50;
           background-color: $color-primary-500;
         }
-
-
       }
     }
 
@@ -299,16 +301,7 @@
   }
 }
 
-.dark .cards-work__item {
-  &--rooblee,
-  &--ostrovfortov,
-  &--trikotazh,
-  &--retailrocket,
-  &--online-tv,
-  &--escape-room,
-  &--israel,
-  &--cat-energy {
-    background-color: $color-dark-800;
-  }
+[data-theme="dark"] .cards-work .cards-work__item {
+  background-color: $color-dark-800;
 }
 

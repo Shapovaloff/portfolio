@@ -1,4 +1,11 @@
-- var aboutList = ["Frontend-разработчик", "Опыт 1,5+ года", "Постоянно обучаюсь и изучаю новое"]
+-
+  var aboutList = [
+    "Умею создавать красивые, функциональные и интуитивно понятные пользовательские интерфейсы",
+    "Опыт <span data-experience='text'>4 года и 2 месяца</span>",
+    "Умением работать в команде",
+    "Постоянно обучаюсь и изучаю новое",
+    "Опыт управления небольшой командой разработчиков",
+  ]
 
 section.about#about
   .about__container.container
@@ -14,7 +21,7 @@ section.about#about
         h3 Привет, меня зовут Юрий&nbsp;Шаповалов
         ul
           each aboutItem in aboutList
-            li=aboutItem
+            li!= aboutItem
         a(href="https://career.habr.com/yuryshapovalov", target="_blank" rel="noopener noreferrer").about__link.button.button--opacity
           span Посмотреть резюме
           +icon("icon-arrow-right-top", 24, 24)

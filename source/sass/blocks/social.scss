@@ -36,7 +36,7 @@
   }
 }
 
-.dark .social {
+[data-theme="dark"] .social {
   &__link {
     border-color: transparent;
     background-color: $color-dark-700;

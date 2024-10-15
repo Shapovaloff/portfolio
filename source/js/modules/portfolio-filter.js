@@ -61,7 +61,7 @@ const initFilter = (filterItems) => {
   };
 };
 
-const protfolioFilter = () => {
+const portfolioFilter = () => {
   const containerBlock = document.querySelector('[data-filter="container"]');
 
   if (containerBlock) {
@@ -71,4 +71,4 @@ const protfolioFilter = () => {
   }
 };
 
-export default protfolioFilter;
+export default portfolioFilter;

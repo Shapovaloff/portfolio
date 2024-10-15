@@ -1,4 +1,5 @@
 .theme-switcher {
+  @include reset-btn;
   position: relative;
   background-color: rgba($color-primary-400, .4);
   border-radius: size($border-radius);
@@ -59,12 +60,6 @@
   }
 
   @media (min-width: 1024px) {
-    & input:focus + .theme-switcher__toggle {
-      box-shadow: $bs-btn;
-    }
-  }
-
-  @media (min-width: 1024px) {
     &:hover {
       .theme-switcher__toggle {
         border-color: $color-primary-600;
@@ -73,6 +68,16 @@
           background-color: $color-primary-600;
         }
       }
+    }
+  }
+}
+
+[data-theme="dark"] .theme-switcher {
+  .theme-switcher__toggle::after {
+    transform: translateX(size(32px));
+
+    @include vp--767 {
+      transform: translateX(size(28px));
     }
   }
 }

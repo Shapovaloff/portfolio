@@ -83,6 +83,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    padding-right: 250px;
+
+    @include vp--1023 {
+      padding-right: 0;
+    }
 
     @include vp--767 {
       margin-top: size(48px);
